@@ -25,6 +25,7 @@ defusedxml==0.6.0
 dialogflow==0.6.0
 entrypoints==0.3
 Flask==1.1.1
+Flask-Cors==3.0.8
 Flask-RESTful==0.3.7
 ftfy==5.5.1
 gast==0.2.2
@@ -69,6 +70,7 @@ lazy-object-proxy==1.4.1
 lxml==4.4.1
 Markdown==3.1.1
 MarkupSafe==1.1.1
+marshmallow==3.2.2
 mccabe==0.6.1
 mistune==0.8.4
 more-itertools==7.2.0
@@ -84,6 +86,7 @@ pandocfilters==1.4.2
 parsel==1.5.1
 parso==0.5.0
 pickleshare==0.7.5
+pipenv==2018.11.26
 pluggy==0.12.0
 post==2019.4.13
 pprint==0.1
@@ -101,6 +104,7 @@ PyDispatcher==2.0.5
 Pygments==2.4.2
 PyHamcrest==1.9.0
 pylint==2.3.1
+pymailer==0.1.0
 pyOpenSSL==19.0.0
 pyparsing==2.4.2
 Pyrebase4==4.3.0
@@ -140,6 +144,8 @@ Twisted==19.7.0
 typed-ast==1.4.0
 uritemplate==3.0.0
 urllib3==1.25.3
+virtualenv==16.7.6
+virtualenv-clone==0.5.3
 w3lib==1.20.0
 wcwidth==0.1.7
 webencodings==0.5.1
