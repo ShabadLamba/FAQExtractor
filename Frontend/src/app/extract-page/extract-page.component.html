@@ -1,0 +1,133 @@
+<body>
+  <header class="masthead text-center text-white">
+    <div class="masthead-content">
+      <div class="container">
+        <h1 class="masthead-heading">{{ extractPageTitle }}</h1>
+        <h6 class="masthead-subheading">
+          Extract Questions and Answers from any website with just ONE CLICK!
+        </h6>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="text-xl-center text-dark extract-body">
+        <b>STEP 1:</b> Select The Type fo Website you want to fetch FAQs from
+      </div>
+      <table class="table table-borderless">
+        <tbody>
+          <tr class="center-align">
+            <td>
+              <button
+                (click)="typeOfWebsite = 0"
+                class="btn btn-primary btn-xl-right"
+              >
+                Type 1
+              </button>
+            </td>
+            <td>
+              <button
+                (click)="typeOfWebsite = 1"
+                class="btn btn-primary btn-xl-right"
+              >
+                Type 2
+              </button>
+              <!-- <img class="img-fluid rounded-circle" src="img/01.jpg" alt="" /> -->
+            </td>
+            <td>
+              <button
+                (click)="typeOfWebsite = 2"
+                class="btn btn-primary btn-xl-right"
+              >
+                Type 3
+              </button>
+            </td>
+          </tr>
+          <tr class="text-lg-center text-dark font-weight-bold textStyle">
+            <td>Questions and Answers are on the same page</td>
+            <td>
+              Questions are links to Answers which are on a different page
+            </td>
+            <td>
+              Answers are loading with Ajax call after Question is clicked
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="text-xl-center text-dark extract-body">
+        <b>STEP 2:</b> Enter the URL for the Website
+      </div>
+      <div class="col-md-12">
+        <form>
+          <div class="input-group my-5 mb-5 w-50 mx-auto">
+            <input
+              [(ngModel)]="url"
+              name="url"
+              type="url"
+              class="form-control"
+              placeholder="https://experience.imiconnect.io/faqs/"
+              aria-label="Website's Name"
+              aria-describedby="button-addon2"
+              required
+            />
+          </div>
+        </form>
+      </div>
+
+      <div class="text-xl-center text-dark extract-body">
+        <b>STEP 3:</b> Enter the file name of your csv
+      </div>
+      <div class="col-md-12">
+        <form>
+          <div class="input-group my-5 mb-5 w-50 mx-auto">
+            <input
+              [(ngModel)]="fileName"
+              name="file"
+              class="form-control"
+              placeholder="imiconnectFAQs"
+              aria-label="Website's Name"
+              aria-describedby="button-addon2"
+              required
+            />
+            <div class="input-group-append">
+              <button
+                class="btnPaperPlane btn-primary"
+                type="button"
+                id="button-addon2"
+                (click)="fetchData(url, fileName, typeOfWebsite)"
+              >
+                <i class="fa fa-paper-plane centerPaperPlane"></i>
+              </button>
+            </div>
+            <!-- <input type="checkbox" ngModel [ngModelOptions]="{standalone: true}" /> -->
+          </div>
+        </form>
+      </div>
+
+      <div class="text-xl-center text-dark extract-body">
+        <b>STEP 4:</b> Click the Show button below to see the data and download
+        csv
+      </div>
+      <app-data-display
+        *ngIf="isDataFetched"
+        [listOfItems]="items"
+        [filename]="fileName"
+        >{{ isDataFetched }}</app-data-display
+      >
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <!-- <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2019</p> -->
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>

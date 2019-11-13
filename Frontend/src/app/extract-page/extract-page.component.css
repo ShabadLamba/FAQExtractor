@@ -1,0 +1,40 @@
+/* @import url('https://fonts.googleapis.com/css?family=Tajawal'); */
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.extract-body {
+  font-family: "Lato";
+  color: #333333;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-top: 3rem;
+}
+.form-control {
+  height: 56px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding-left: 30px;
+}
+.btnPaperPlane {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding-right: 75px;
+  background: #fd9460;
+  border-color: #fd9460;
+}
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #fd9460;
+  outline: 0;
+  box-shadow: none;
+}
+
+.centerPaperPlane {
+  padding-left: 50px;
+}
+
+.textStyle {
+  font-size: 17px;
+}
