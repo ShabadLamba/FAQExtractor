@@ -1,10 +1,11 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
 from QnAMain import *
 import logging
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static',
+            template_folder='static')
 CORS(app, resources={r'/faq/extractByUrl/*': {"origins": "*"}})
 
 ### Fire Initialization ###
@@ -12,6 +13,11 @@ fb = firebaseUtil()
 user = fb.firebaseAuth()  # Authenticating Firebase
 
 # fb.setData(user, category.upper(), finalListOfQuestionsAndAnswers)
+
+
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 
 @app.route('/faq/extractByUrl/Hierarchy', methods=["POST"])
