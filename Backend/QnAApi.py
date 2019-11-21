@@ -16,6 +16,8 @@ user = fb.firebaseAuth()  # Authenticating Firebase
 
 
 @app.route('/faq/')
+@app.route('/faq')
+@app.route('/')
 def home():
     return render_template('index.html')
 
