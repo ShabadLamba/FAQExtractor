@@ -15,8 +15,7 @@ user = fb.firebaseAuth()  # Authenticating Firebase
 # fb.setData(user, category.upper(), finalListOfQuestionsAndAnswers)
 
 
-@app.route('/faq')
-@app.route('/')
+@app.route('/faq/')
 def home():
     return render_template('index.html')
 
@@ -56,9 +55,11 @@ def fetchByUrl_GetDataFromFirebase():
             return jsonify(qnaCollectionOrderedDict[listOfKeys[listOfUrls.index(url)]])
     return jsonify([False])
 
-@app.route("/faq/heartbeat",methods=["GET"])
+
+@app.route("/faq/heartbeat", methods=["GET"])
 def get_heartbeat():
-    return jsonify({"Status":"Running"}),200
+    return jsonify({"Status": "Running"}), 200
+
 
 @app.errorhandler(500)
 def server_error(e):
