@@ -53,6 +53,9 @@ export class AppService {
   downloadFile(data: any, filename = 'data') {
     const replacer = (key, value) => value === null ? '' : value; // specify how you want to handle null values here
     const header = Object.keys(data[0]);
+    const answer: string = header[0];
+    header[0] = header[1];
+    header[1] = answer;
     const csv = data.map(row => header.map(fieldName => JSON.stringify(row[fieldName], replacer)).join(','));
     csv.unshift(header.join(','));
     const csvArray = csv.join('\r\n');
