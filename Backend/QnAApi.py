@@ -10,7 +10,6 @@ CORS(app, resources={r'/faq/extractByUrl/*': {"origins": "*"}})
 
 ### Fire Initialization ###
 fb = firebaseUtil()
-user = fb.firebaseAuth()  # Authenticating Firebase
 
 # fb.setData(user, category.upper(), finalListOfQuestionsAndAnswers)
 
@@ -26,6 +25,7 @@ def home():
 def fetchByUrl_Hierarchy():
     print(request.get_json())
     tools = Utility()
+    user = fb.firebaseAuth()  # Authenticating Firebase
     req_data = request.get_json()
     QnADict = getQnAWithHierarchy(req_data["url"])
     fb.setData(user, tools.encryptUrl(req_data["url"]).decode(), QnADict)
@@ -35,6 +35,7 @@ def fetchByUrl_Hierarchy():
 @app.route('/faq/extractByUrl/NLP', methods=["POST"])
 def fetchByUrl_NLP():
     print(request.get_json())
+    user = fb.firebaseAuth()  # Authenticating Firebase
     req_data = request.get_json()
     QnADict = getQnAWithNPL(req_data["url"])
     return jsonify(QnADict)
@@ -43,6 +44,7 @@ def fetchByUrl_NLP():
 @app.route('/faq/extractByUrl/GetData/Firebase', methods=["POST"])
 def fetchByUrl_GetDataFromFirebase():
     tools = Utility()
+    user = fb.firebaseAuth()  # Authenticating Firebase
     req_data = request.get_json()
     qnaCollectionOrderedDict = fb.getData()
     listOfKeys = []
