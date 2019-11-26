@@ -1,17 +1,15 @@
 <div class="container">
-  <button class="btn btn-primary center-align" (click)="toggleShowData()">
+    <button class="btn btn-primary center-align" (click)="toggleShowData()">
     {{ showData ? "Hide" : "Show" }} Data
   </button>
-  <div class="card" *ngIf="showData">
-    <!-- <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Question and Answer table</h3> -->
-    <div class="card-body">
-      <div id="table" class="table-editable">
-        <table
-          class="table table-bordered table-responsive-md table-striped text-center"
-        >
-          <tr>
-            <th>
-              <span class="custom-control custom-checkbox mb-3">
+    <div class="card" *ngIf="showData">
+        <!-- <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Question and Answer table</h3> -->
+        <div class="card-body">
+            <div id="table" class="table-editable">
+                <table class="table table-bordered table-responsive-md table-striped text-center">
+                    <tr>
+                        <th>
+                            <span class="custom-control custom-checkbox mb-3">
                 <button
                   type="button"
                   class="btn btn-dark"
@@ -20,16 +18,16 @@
                   Select/ Unselect All
                 </button>
               </span>
-            </th>
-            <th class="text-center">Id</th>
-            <th class="text-center">Category</th>
-            <th class="text-center">Answer</th>
-            <th class="text-center">Question</th>
-          </tr>
-          <tr *ngFor="let item of listOfQnA; let id = index">
-            <td>
-              <form #form="ngForm">
-                <span class="custom-control custom-checkbox mb-3">
+                        </th>
+                        <th class="text-center">Id</th>
+                        <th class="text-center">Category</th>
+                        <th class="text-center">Answer</th>
+                        <th class="text-center">Question</th>
+                    </tr>
+                    <tr *ngFor="let item of listOfQnA; let id = index">
+                        <td>
+                            <form #form="ngForm">
+                                <span class="custom-control custom-checkbox mb-3">
                   <input
                     type="checkbox"
                     name="list_name"
@@ -43,17 +41,13 @@
                     for="customCheck{{ id }}"
                   ></label>
                 </span>
-              </form>
-            </td>
-            <td>
-              {{ id }}
-            </td>
-            <td>
-              <span
-                (keyup)="changeValue(id, 'category', $event)"
-                (blur)="updateList(id, 'category', $event)"
-                contenteditable="true"
-                >{{ item.category }}</span
+                            </form>
+                        </td>
+                        <td>
+                            {{ id }}
+                        </td>
+                        <td>
+                            <span (keyup)="changeValue(id, 'category', $event)" (blur)="updateList(id, 'category', $event)" contenteditable="true">{{ item.category }}</span
               >
             </td>
             <td>
