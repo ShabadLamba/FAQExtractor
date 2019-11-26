@@ -17,6 +17,7 @@ import { DataTablesModule } from "angular-datatables";
 import { ButtonsModule } from "ngx-bootstrap/buttons";
 import { ExtractPageApiService } from "./extract-page/extract-page-api.service";
 import { AppService } from "./app.service";
+import { ExtractComponent } from './components/extract/extract.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AppService } from "./app.service";
     HomePageComponent,
     ExtractPageComponent,
     ExplorePageComponent,
-    DataDisplayComponent
+    DataDisplayComponent,
+    ExtractComponent
   ],
   imports: [
     BrowserModule,
@@ -47,4 +49,4 @@ import { AppService } from "./app.service";
   providers: [ExtractPageApiService, AppService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
