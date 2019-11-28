@@ -6,7 +6,7 @@ import logging
 
 app = Flask(__name__, static_folder='static',
             template_folder='static')
-CORS(app, resources={r'/faq/extractByUrl/*': {"origins": "*"}})
+CORS(app, resources={r'/faq*': {"origins": "*"}})
 
 ### Fire Initialization ###
 fb = firebaseUtil()
@@ -14,6 +14,8 @@ fb = firebaseUtil()
 # fb.setData(user, category.upper(), finalListOfQuestionsAndAnswers)
 
 
+@app.route('/faq/extract')
+@app.route('/faq/home')
 @app.route('/faq/')
 @app.route('/faq')
 @app.route('/')
