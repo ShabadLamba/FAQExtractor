@@ -17,7 +17,7 @@ import { DataTablesModule } from "angular-datatables";
 import { ButtonsModule } from "ngx-bootstrap/buttons";
 import { ExtractPageApiService } from "./extract-page/extract-page-api.service";
 import { AppService } from "./app.service";
-import { ExtractComponent } from './components/extract/extract.component';
+import { ExtractComponent } from "./components/extract/extract.component";
 
 @NgModule({
   declarations: [
@@ -36,6 +36,7 @@ import { ExtractComponent } from './components/extract/extract.component';
     RouterModule.forRoot([
       { path: "faq/extract", component: ExtractPageComponent },
       { path: "faq/explore", component: ExplorePageComponent },
+      { path: "faq/extractNew", component: ExtractComponent },
       { path: "faq/home", component: HomePageComponent },
       { path: "", redirectTo: "faq/home", pathMatch: "full" },
       { path: "**", redirectTo: "faq/home", pathMatch: "full" }
@@ -49,4 +50,4 @@ import { ExtractComponent } from './components/extract/extract.component';
   providers: [ExtractPageApiService, AppService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
