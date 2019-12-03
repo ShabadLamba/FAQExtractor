@@ -90,68 +90,75 @@ class Utility:
             Outputs: dictOfQA
         """
         #sentences = self.SentenceTokenizer(var1)
+        
+        try:
+            indexOfQuestions = []
 
-        indexOfQuestions = []
+            # Getting indexes of questions
+            for i, sentence in enumerate(sentences):
+                if(sentence == '?'):
+                    indexOfQuestions.append(i-1)
 
-        # Getting indexes of questions
-        for i, sentence in enumerate(sentences):
-            if(sentence == '?'):
-                indexOfQuestions.append(i-1)
+            dictOfQA = {}
 
-        dictOfQA = {}
+            for i in range(1, len(indexOfQuestions)):
+                answer = ''
+                for j in range(indexOfQuestions[i-1], indexOfQuestions[i]):
+                    if(j not in indexOfQuestions):
+                        answer += sentences[j]
+                dictOfQA[sentences[indexOfQuestions[i-1]]] = answer
 
-        for i in range(1, len(indexOfQuestions)):
-            answer = ''
-            for j in range(indexOfQuestions[i-1], indexOfQuestions[i]):
-                if(j not in indexOfQuestions):
-                    answer += sentences[j]
-            dictOfQA[sentences[indexOfQuestions[i-1]]] = answer
+            """ 
+                The above loop doesn't fetches the last question for obvious reasons.
+            """
+            lastanswer = ''
+            for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+                lastanswer += sentences[k]
 
-        """ 
-            The above loop doesn't fetches the last question for obvious reasons.
-        """
-        lastanswer = ''
-        for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
-            lastanswer += sentences[k]
-
-        dictOfQA[sentences[indexOfQuestions[len(
-            indexOfQuestions) - 1]]] = lastanswer
-
-        return dictOfQA
+            dictOfQA[sentences[indexOfQuestions[len(
+                indexOfQuestions) - 1]]] = lastanswer
+            
+            return dictOfQA
+        except:
+            return {}
 
     # , indexOfQnAToFindHeirarchy=0):
     def fetchHtmlHierarchy(self, dictQnA, content):
-        listOfQnA = []
-        # pprint(dictQnA)
-        for keys in dictQnA:
-            listOfQnA.append(['credit', dictQnA[keys][2:], keys])
-        listOfQnA.insert(0, ['Category', 'Answers', 'Questions'])
+        try:
+            listOfQnA = []
+            # pprint(dictQnA)
+            for keys in dictQnA:
+                listOfQnA.append(['credit', dictQnA[keys][2:], keys])
+            listOfQnA.insert(0, ['Category', 'Answers', 'Questions'])
 
-        # pprint(listOfQnA)
-        # if(indexOfQnAToFindHeirarchy == 0):
-        indexToSearchFor = int(len(listOfQnA) / 2)
-        # else:
-        # indexToSearchFor = indexOfQnAToFindHeirarchy
+            # pprint(listOfQnA)
+            # if(indexOfQnAToFindHeirarchy == 0):
+            indexToSearchFor = int(len(listOfQnA) / 2)
+            # else:
+            # indexToSearchFor = indexOfQnAToFindHeirarchy
 
-        textPatternQuestions = listOfQnA[indexToSearchFor][2].strip()[0:10]
-        textPatternAnswers = listOfQnA[indexToSearchFor][1].strip()[0:10]
-        soup = BeautifulSoup(content.text, 'html.parser')
-        listOfQnAHeirarchies = []
-        for textPattern in [textPatternQuestions, textPatternAnswers]:
-            try:
-                textPatternTags = soup.body.findAll(
-                    text=re.compile(textPattern))[0]
-                listOfTags = []
-                for parent in textPatternTags.parents:
-                    listOfTags.append((parent.name, parent.attrs,))
-                    if(parent.name == 'body'):
-                        break
-                listOfQnAHeirarchies.append(listOfTags)
-            except IndexError as e:
-                print("TEXT PATTERN \n \n \" " + textPattern +
-                      "\" \n \n WASN'T FOUND IN THE HTML TEXT \n \n")
-                print(e)
-        return listOfQnAHeirarchies
+            textPatternQuestions = listOfQnA[indexToSearchFor][2].strip()[0:10]
+            textPatternAnswers = listOfQnA[indexToSearchFor][1].strip()[0:10]
+            soup = BeautifulSoup(content.text, 'html.parser')
+            listOfQnAHeirarchies = []
+            for textPattern in [textPatternQuestions, textPatternAnswers]:
+                try:
+                    textPatternTags = soup.body.findAll(
+                        text=re.compile(textPattern))[0]
+                    listOfTags = []
+                    for parent in textPatternTags.parents:
+                        listOfTags.append((parent.name, parent.attrs,))
+                        if(parent.name == 'body'):
+                            break
+                    listOfQnAHeirarchies.append(listOfTags)
+                except IndexError as e:
+                    print("TEXT PATTERN \n \n \" " + textPattern +
+                        "\" \n \n WASN'T FOUND IN THE HTML TEXT \n \n")
+                    # print(e)
+                    return []
+            return listOfQnAHeirarchies
+        except:
+            return []
 
     def generateSelectorQuery(self,questionHierarchy,answerHierarchy):
         xPathListQuestion= []
