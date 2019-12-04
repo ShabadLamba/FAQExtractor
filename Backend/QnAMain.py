@@ -100,43 +100,47 @@ def getQnAWithNPL(url):
 
 def getQnAWithHierarchy(url):
     ### Utility Functions Class Initialized ###
-    tools = Utility()
-    content = requests.get(url)
-    soup = BeautifulSoup(content.text, 'html.parser')
-    htmlText = tools.textFromHtml(content)
-    sentences = tools.SentenceTokenizer(htmlText)
-    QnA = tools.fetchQnAWithHtmlText(sentences)
-    # pprint(QnA)
-    QnAHeirarchies = tools.fetchHtmlHierarchy(QnA, content)
-    # pprint(QnAHeirarchies)
-
     try:
-        QnAselectorQueries = tools.generateSelectorQuery(
-            QnAHeirarchies[0], QnAHeirarchies[1])
-        for x in QnAselectorQueries:
-            print(x)
-    except IndexError as e:
-        print(e)
-        print("COULDN'T FETCH HTML HEIRARCHY")
+        tools = Utility()
+        content = requests.get(url)
+        soup = BeautifulSoup(content.text, 'html.parser')
+        htmlText = tools.textFromHtml(content)
+        sentences = tools.SentenceTokenizer(htmlText)
+        QnA = tools.fetchQnAWithHtmlText(sentences)
+        # pprint(QnA)
+        QnAHeirarchies = tools.fetchHtmlHierarchy(QnA, content)
+        # pprint(QnAHeirarchies)
 
-    listOfQuestions = getQuenstionsFromQuery(QnAselectorQueries[0], soup)
-    listOfAnswers = getAnswersFromQuery(QnAselectorQueries[1], soup)
-    dictOfQuestionsAndAnswers = {}
-    for question, answer in zip(listOfQuestions, listOfAnswers):
-        dictOfQuestionsAndAnswers[question] = answer
+        try:
+            QnAselectorQueries = tools.generateSelectorQuery(
+                QnAHeirarchies[0], QnAHeirarchies[1])
+            for x in QnAselectorQueries:
+                print(x)
+        except IndexError as e:
+            # print(e)
+            print("COULDN'T FETCH HTML HEIRARCHY")
+            return []
 
-    finalListOfQuestionsAndAnswers = []
-    category = tools.get_website_name_from_url(url)
+        listOfQuestions = getQuenstionsFromQuery(QnAselectorQueries[0], soup)
+        listOfAnswers = getAnswersFromQuery(QnAselectorQueries[1], soup)
+        dictOfQuestionsAndAnswers = {}
+        for question, answer in zip(listOfQuestions, listOfAnswers):
+            dictOfQuestionsAndAnswers[question] = answer
 
-    for keys in dictOfQuestionsAndAnswers:
-        finalListOfQuestionsAndAnswers.append(
-            {"category": url, "answer": ftfy.fix_text(dictOfQuestionsAndAnswers[keys].strip()), "question": ftfy.fix_text(keys.strip())})
+        finalListOfQuestionsAndAnswers = []
+        category = tools.get_website_name_from_url(url)
 
-    pprint(finalListOfQuestionsAndAnswers)
-    print(tools.get_website_name_from_url(url))
+        for keys in dictOfQuestionsAndAnswers:
+            finalListOfQuestionsAndAnswers.append(
+                {"category": url, "answer": ftfy.fix_text(dictOfQuestionsAndAnswers[keys].strip()), "question": ftfy.fix_text(keys.strip())})
 
-    return finalListOfQuestionsAndAnswers
-    # fb.setData(user, category.upper(), finalListOfQuestionsAndAnswers)
+        pprint(finalListOfQuestionsAndAnswers)
+        print(tools.get_website_name_from_url(url))
+
+        return finalListOfQuestionsAndAnswers
+        # fb.setData(user, category.upper(), finalListOfQuestionsAndAnswers)
+    except:
+        return []
 
     """ This section of code is for FILE I/O """
     # finalListOfQuestionsAndAnswers.insert(
