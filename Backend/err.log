@@ -1,0 +1,3189 @@
+[2019-11-26 12:10:13 +0000] [17208] [DEBUG] Current configuration:
+  config: None
+  bind: ['localhost:9090']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 2
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/FAQExtractor/Backend
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: out.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: err.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: QnAApi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fb7e529d510>
+  on_reload: <function OnReload.on_reload at 0x7fb7e529d620>
+  when_ready: <function WhenReady.when_ready at 0x7fb7e529d730>
+  pre_fork: <function Prefork.pre_fork at 0x7fb7e529d840>
+  post_fork: <function Postfork.post_fork at 0x7fb7e529d950>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fb7e529da60>
+  worker_int: <function WorkerInt.worker_int at 0x7fb7e529db70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fb7e529dc80>
+  pre_exec: <function PreExec.pre_exec at 0x7fb7e529dd90>
+  pre_request: <function PreRequest.pre_request at 0x7fb7e529dea0>
+  post_request: <function PostRequest.post_request at 0x7fb7e529df28>
+  child_exit: <function ChildExit.child_exit at 0x7fb7e52bb0d0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fb7e52bb1e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fb7e52bb2f0>
+  on_exit: <function OnExit.on_exit at 0x7fb7e52bb400>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+[2019-11-26 12:10:13 +0000] [17208] [INFO] Starting gunicorn 20.0.0
+[2019-11-26 12:10:13 +0000] [17208] [DEBUG] Arbiter booted
+[2019-11-26 12:10:13 +0000] [17208] [INFO] Listening at: http://127.0.0.1:9090 (17208)
+[2019-11-26 12:10:13 +0000] [17208] [INFO] Using worker: threads
+[2019-11-26 12:10:13 +0000] [17212] [INFO] Booting worker with pid: 17212
+[2019-11-26 12:10:13 +0000] [17213] [INFO] Booting worker with pid: 17213
+[2019-11-26 12:10:13 +0000] [17208] [DEBUG] 2 workers
+[2019-11-26 12:10:18 +0000] [17208] [INFO] Handling signal: int
+[2019-11-26 12:10:18 +0000] [17213] [INFO] Worker exiting (pid: 17213)
+[2019-11-26 12:10:19 +0000] [17208] [INFO] Shutting down: Master
+[2019-11-26 12:10:22 +0000] [17220] [DEBUG] Current configuration:
+  config: None
+  bind: ['localhost:9090']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 2
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/FAQExtractor/Backend
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: out.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: err.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: QnAApi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f20e209f510>
+  on_reload: <function OnReload.on_reload at 0x7f20e209f620>
+  when_ready: <function WhenReady.when_ready at 0x7f20e209f730>
+  pre_fork: <function Prefork.pre_fork at 0x7f20e209f840>
+  post_fork: <function Postfork.post_fork at 0x7f20e209f950>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f20e209fa60>
+  worker_int: <function WorkerInt.worker_int at 0x7f20e209fb70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f20e209fc80>
+  pre_exec: <function PreExec.pre_exec at 0x7f20e209fd90>
+  pre_request: <function PreRequest.pre_request at 0x7f20e209fea0>
+  post_request: <function PostRequest.post_request at 0x7f20e209ff28>
+  child_exit: <function ChildExit.child_exit at 0x7f20e20bc0d0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f20e20bc1e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f20e20bc2f0>
+  on_exit: <function OnExit.on_exit at 0x7f20e20bc400>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+[2019-11-26 12:10:22 +0000] [17220] [INFO] Starting gunicorn 20.0.0
+[2019-11-26 12:10:22 +0000] [17220] [DEBUG] Arbiter booted
+[2019-11-26 12:10:22 +0000] [17220] [INFO] Listening at: http://127.0.0.1:9090 (17220)
+[2019-11-26 12:10:22 +0000] [17220] [INFO] Using worker: threads
+[2019-11-26 12:10:22 +0000] [17224] [INFO] Booting worker with pid: 17224
+[2019-11-26 12:10:22 +0000] [17225] [INFO] Booting worker with pid: 17225
+[2019-11-26 12:10:22 +0000] [17220] [DEBUG] 2 workers
+[2019-11-26 12:10:29 +0000] [17225] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:10:29 +0000] [17225] [DEBUG] Closing connection.
+[2019-11-26 12:10:32 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:10:32 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:10:44 +0000] [17225] [DEBUG] POST /alfred/train
+[2019-11-26 12:10:44 +0000] [17225] [DEBUG] Closing connection.
+[2019-11-26 12:10:54 +0000] [17224] [DEBUG] POST /alfred/train
+[2019-11-26 12:10:54 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:10:58 +0000] [17224] [DEBUG] POST /alfred/inference
+[2019-11-26 12:10:58 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:10:59 +0000] [17225] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:10:59 +0000] [17225] [DEBUG] Closing connection.
+[2019-11-26 12:11:02 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:11:02 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:11:21 +0000] [17224] [DEBUG] POST /alfred/inference
+[2019-11-26 12:11:21 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:11:29 +0000] [17225] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:11:29 +0000] [17225] [DEBUG] Closing connection.
+[2019-11-26 12:11:32 +0000] [17225] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:11:32 +0000] [17225] [DEBUG] Closing connection.
+[2019-11-26 12:11:53 +0000] [17224] [DEBUG] POST /alfred/inference
+[2019-11-26 12:11:53 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:11:59 +0000] [17225] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:11:59 +0000] [17225] [DEBUG] Closing connection.
+[2019-11-26 12:12:02 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:12:02 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:12:29 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:12:29 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:12:32 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:12:32 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:12:42 +0000] [17225] [DEBUG] POST /alfred/inference
+[2019-11-26 12:12:42 +0000] [17225] [DEBUG] Closing connection.
+[2019-11-26 12:12:51 +0000] [17224] [DEBUG] POST /alfred/inference
+[2019-11-26 12:12:51 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:13:00 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:13:00 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:13:00 +0000] [17225] [DEBUG] POST /alfred/inference
+[2019-11-26 12:13:00 +0000] [17225] [DEBUG] Closing connection.
+[2019-11-26 12:13:02 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:13:02 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:13:06 +0000] [17224] [DEBUG] OPTIONS /alfred/algorithms
+[2019-11-26 12:13:06 +0000] [17225] [DEBUG] OPTIONS /alfred/entity/types
+[2019-11-26 12:13:06 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:13:06 +0000] [17225] [DEBUG] Closing connection.
+[2019-11-26 12:13:09 +0000] [17225] [DEBUG] OPTIONS /alfred/algorithms
+[2019-11-26 12:13:09 +0000] [17225] [DEBUG] Closing connection.
+[2019-11-26 12:13:14 +0000] [17224] [DEBUG] POST /alfred/entity
+[2019-11-26 12:13:14 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:13:14 +0000] [17224] [DEBUG] POST /alfred/inference
+[2019-11-26 12:13:14 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:13:30 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:13:30 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:13:32 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:13:32 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:13:47 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:13:47 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:14:00 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:14:00 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:14:02 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:14:02 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:14:30 +0000] [17225] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:14:30 +0000] [17225] [DEBUG] Closing connection.
+[2019-11-26 12:14:32 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:14:32 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:14:48 +0000] [17224] [DEBUG] OPTIONS /alfred/algorithms
+[2019-11-26 12:14:48 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:14:53 +0000] [17224] [DEBUG] OPTIONS /alfred/algorithms
+[2019-11-26 12:14:53 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:15:00 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:15:00 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:15:02 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:15:02 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:15:30 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:15:30 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:15:32 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:15:33 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:15:48 +0000] [17224] [DEBUG] OPTIONS /alfred/algorithms
+[2019-11-26 12:15:48 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:16:00 +0000] [17225] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:16:00 +0000] [17225] [DEBUG] Closing connection.
+[2019-11-26 12:16:03 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:16:03 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:16:30 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:16:30 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:16:33 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:16:33 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:16:55 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:16:55 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:16:58 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:16:58 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:17:00 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:17:00 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:17:03 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:17:03 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:17:11 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:17:11 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:17:30 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:17:30 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:17:33 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:17:33 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:18:00 +0000] [17225] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:18:00 +0000] [17225] [DEBUG] Closing connection.
+[2019-11-26 12:18:02 +0000] [17225] [DEBUG] OPTIONS /alfred/algorithms
+[2019-11-26 12:18:02 +0000] [17225] [DEBUG] Closing connection.
+[2019-11-26 12:18:03 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:18:03 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:18:30 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:18:30 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:18:33 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:18:33 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:19:00 +0000] [17225] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:19:00 +0000] [17225] [DEBUG] Closing connection.
+[2019-11-26 12:19:03 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:19:03 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:19:30 +0000] [17225] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:19:30 +0000] [17225] [DEBUG] Closing connection.
+[2019-11-26 12:19:33 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:19:33 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:20:00 +0000] [17225] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:20:00 +0000] [17225] [DEBUG] Closing connection.
+[2019-11-26 12:20:03 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:20:03 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:20:30 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:20:30 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:20:33 +0000] [17224] [DEBUG] GET /alfred/heartbeat
+[2019-11-26 12:20:33 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:20:40 +0000] [17224] [DEBUG] OPTIONS /alfred/train
+[2019-11-26 12:20:40 +0000] [17224] [DEBUG] Closing connection.
+[2019-11-26 12:20:55 +0000] [17220] [INFO] Handling signal: term
+[2019-11-26 12:20:56 +0000] [17224] [INFO] Worker exiting (pid: 17224)
+[2019-11-26 12:20:56 +0000] [17225] [INFO] Worker exiting (pid: 17225)
+[2019-11-26 12:20:56 +0000] [17220] [INFO] Shutting down: Master
+[2019-11-26 12:24:31 +0000] [17591] [DEBUG] Current configuration:
+  config: None
+  bind: ['localhost:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 2
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/FAQExtractor/Backend
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: out.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: err.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: QnAApi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f35eda9c510>
+  on_reload: <function OnReload.on_reload at 0x7f35eda9c620>
+  when_ready: <function WhenReady.when_ready at 0x7f35eda9c730>
+  pre_fork: <function Prefork.pre_fork at 0x7f35eda9c840>
+  post_fork: <function Postfork.post_fork at 0x7f35eda9c950>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f35eda9ca60>
+  worker_int: <function WorkerInt.worker_int at 0x7f35eda9cb70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f35eda9cc80>
+  pre_exec: <function PreExec.pre_exec at 0x7f35eda9cd90>
+  pre_request: <function PreRequest.pre_request at 0x7f35eda9cea0>
+  post_request: <function PostRequest.post_request at 0x7f35eda9cf28>
+  child_exit: <function ChildExit.child_exit at 0x7f35edab90d0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f35edab91e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f35edab92f0>
+  on_exit: <function OnExit.on_exit at 0x7f35edab9400>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+[2019-11-26 12:24:31 +0000] [17591] [INFO] Starting gunicorn 20.0.0
+[2019-11-26 12:24:31 +0000] [17591] [DEBUG] Arbiter booted
+[2019-11-26 12:24:31 +0000] [17591] [INFO] Listening at: http://127.0.0.1:5000 (17591)
+[2019-11-26 12:24:31 +0000] [17591] [INFO] Using worker: threads
+[2019-11-26 12:24:31 +0000] [17595] [INFO] Booting worker with pid: 17595
+[2019-11-26 12:24:31 +0000] [17596] [INFO] Booting worker with pid: 17596
+[2019-11-26 12:24:31 +0000] [17591] [DEBUG] 2 workers
+[2019-11-26 12:24:40 +0000] [17591] [INFO] Handling signal: int
+[2019-11-26 12:24:40 +0000] [17596] [INFO] Worker exiting (pid: 17596)
+[2019-11-26 12:24:40 +0000] [17595] [INFO] Worker exiting (pid: 17595)
+[2019-11-26 12:24:41 +0000] [17591] [INFO] Shutting down: Master
+[2019-11-26 12:24:44 +0000] [17604] [DEBUG] Current configuration:
+  config: None
+  bind: ['localhost:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 2
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/FAQExtractor/Backend
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: out.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: err.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: QnAApi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fe38d1f8510>
+  on_reload: <function OnReload.on_reload at 0x7fe38d1f8620>
+  when_ready: <function WhenReady.when_ready at 0x7fe38d1f8730>
+  pre_fork: <function Prefork.pre_fork at 0x7fe38d1f8840>
+  post_fork: <function Postfork.post_fork at 0x7fe38d1f8950>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fe38d1f8a60>
+  worker_int: <function WorkerInt.worker_int at 0x7fe38d1f8b70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fe38d1f8c80>
+  pre_exec: <function PreExec.pre_exec at 0x7fe38d1f8d90>
+  pre_request: <function PreRequest.pre_request at 0x7fe38d1f8ea0>
+  post_request: <function PostRequest.post_request at 0x7fe38d1f8f28>
+  child_exit: <function ChildExit.child_exit at 0x7fe38d2150d0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fe38d2151e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fe38d2152f0>
+  on_exit: <function OnExit.on_exit at 0x7fe38d215400>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+[2019-11-26 12:24:44 +0000] [17604] [INFO] Starting gunicorn 20.0.0
+[2019-11-26 12:24:44 +0000] [17604] [DEBUG] Arbiter booted
+[2019-11-26 12:24:44 +0000] [17604] [INFO] Listening at: http://127.0.0.1:5000 (17604)
+[2019-11-26 12:24:44 +0000] [17604] [INFO] Using worker: threads
+[2019-11-26 12:24:44 +0000] [17608] [INFO] Booting worker with pid: 17608
+[2019-11-26 12:24:44 +0000] [17609] [INFO] Booting worker with pid: 17609
+[2019-11-26 12:24:44 +0000] [17604] [DEBUG] 2 workers
+[2019-11-26 12:24:46 +0000] [17608] [DEBUG] GET /faq
+[2019-11-26 12:24:46 +0000] [17608] [DEBUG] Closing connection.
+[2019-11-26 12:24:53 +0000] [17609] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-11-26 12:24:53 +0000] [17609] [DEBUG] Closing connection.
+[2019-11-26 12:27:34 +0000] [17608] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-11-26 12:27:35 +0000] [17608] [DEBUG] Closing connection.
+[2019-11-26 14:44:22 +0000] [18253] [INFO] Booting worker with pid: 18253
+[2019-11-26 14:44:22 +0000] [18254] [INFO] Booting worker with pid: 18254
+[2019-11-26 14:44:22 +0000] [17604] [INFO] Handling signal: hup
+[2019-11-26 14:44:22 +0000] [17604] [INFO] Hang up: Master
+[2019-11-26 14:44:22 +0000] [17604] [DEBUG] Current configuration:
+  config: None
+  bind: ['localhost:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 2
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/FAQExtractor/Backend
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: out.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: err.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: QnAApi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fe38d1f8510>
+  on_reload: <function OnReload.on_reload at 0x7fe38d1f8620>
+  when_ready: <function WhenReady.when_ready at 0x7fe38d1f8730>
+  pre_fork: <function Prefork.pre_fork at 0x7fe38d1f8840>
+  post_fork: <function Postfork.post_fork at 0x7fe38d1f8950>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fe38d1f8a60>
+  worker_int: <function WorkerInt.worker_int at 0x7fe38d1f8b70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fe38d1f8c80>
+  pre_exec: <function PreExec.pre_exec at 0x7fe38d1f8d90>
+  pre_request: <function PreRequest.pre_request at 0x7fe38d1f8ea0>
+  post_request: <function PostRequest.post_request at 0x7fe38d1f8f28>
+  child_exit: <function ChildExit.child_exit at 0x7fe38d2150d0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fe38d2151e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fe38d2152f0>
+  on_exit: <function OnExit.on_exit at 0x7fe38d215400>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+[2019-11-26 14:44:22 +0000] [18255] [INFO] Booting worker with pid: 18255
+[2019-11-26 14:44:22 +0000] [18256] [INFO] Booting worker with pid: 18256
+[2019-11-26 14:44:24 +0000] [18253] [INFO] Worker exiting (pid: 18253)
+[2019-11-26 14:44:24 +0000] [18254] [INFO] Worker exiting (pid: 18254)
+[2019-11-26 17:25:03 +0000] [18255] [DEBUG] GET /faq
+[2019-11-26 17:25:03 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-26 17:25:03 +0000] [18256] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-26 17:25:03 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-26 17:25:03 +0000] [18256] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-26 17:25:03 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-26 17:26:22 +0000] [18255] [DEBUG] GET /faq
+[2019-11-26 17:26:22 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-26 17:26:22 +0000] [18255] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-26 17:26:22 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-26 17:26:23 +0000] [18255] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-26 17:26:23 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-26 17:26:23 +0000] [18255] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-11-26 17:26:23 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-26 17:26:23 +0000] [18256] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-11-26 17:26:23 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-26 17:26:23 +0000] [18256] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-11-26 17:26:23 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-26 17:26:30 +0000] [18255] [DEBUG] GET /static/favicon.ico
+[2019-11-26 17:26:30 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-26 17:27:22 +0000] [18256] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-11-26 17:27:22 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-26 17:34:05 +0000] [18255] [DEBUG] GET /faq/
+[2019-11-26 17:34:05 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-26 17:34:06 +0000] [18256] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-11-26 17:34:06 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-26 17:34:06 +0000] [18256] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-26 17:34:06 +0000] [18255] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-11-26 17:34:06 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-26 17:34:06 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-26 17:34:06 +0000] [18255] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-11-26 17:34:06 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-26 17:34:06 +0000] [18256] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-26 17:34:06 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-26 17:34:09 +0000] [18255] [DEBUG] GET /static/favicon.ico
+[2019-11-26 17:34:09 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-26 17:34:53 +0000] [18255] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-11-26 17:34:54 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-26 17:34:54 +0000] [18256] [DEBUG] POST /faq/extractByUrl/Hierarchy
+{'url': 'https://sadhashaahab.sadda', 'fileName': 'sasfaf', 'typeOfWebsite': 0}
+[2019-11-26 17:34:55,091] ERROR in app: Exception on /faq/extractByUrl/Hierarchy [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/urllib3/util/connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.6/socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 344, in _make_request
+    self._validate_conn(conn)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 843, in _validate_conn
+    conn.connect()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/urllib3/connection.py", line 316, in connect
+    conn = self._new_conn()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/urllib3/connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x7fe384c9b7b8>: Failed to establish a new connection: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 641, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/urllib3/util/retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='sadhashaahab.sadda', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fe384c9b7b8>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 30, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 104, in getQnAWithHierarchy
+    content = requests.get(url)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='sadhashaahab.sadda', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fe384c9b7b8>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+ERROR:root:An error occurred during a request. 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/urllib3/util/connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.6/socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 344, in _make_request
+    self._validate_conn(conn)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 843, in _validate_conn
+    conn.connect()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/urllib3/connection.py", line 316, in connect
+    conn = self._new_conn()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/urllib3/connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x7fe384c9b7b8>: Failed to establish a new connection: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 641, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/urllib3/util/retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='sadhashaahab.sadda', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fe384c9b7b8>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 30, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 104, in getQnAWithHierarchy
+    content = requests.get(url)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='sadhashaahab.sadda', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fe384c9b7b8>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+[2019-11-26 17:34:55 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-26 17:35:36 +0000] [18256] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-11-26 17:35:36 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-26 17:36:18 +0000] [18255] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-11-26 17:36:19 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-26 17:36:19 +0000] [18255] [DEBUG] POST /faq/extractByUrl/Hierarchy
+{'url': 'https://customerservices.npower.com/app/answers/list/st/5/page/1', 'fileName': 'IMIFAQS', 'typeOfWebsite': 0}
+body div[class~=page-content] nav[class~=navigation] div[class~=navigation__container] ul[class~=navigation__items] li[class~=navigation__item] div[class~=navigation__dropdown] div[class~=navigation__dropdown-container] ul[class~=navigation__child-items] li[class~=navigation__child--list]
+body div[class~=page-content] div div[class~=stack] div[class~=stack__container] div[class~=panels] div[class~=panels__item] div[class~=link-panel] div[class~=link-panel__content] div[class~=link-panel__body]
+<Response [200]>
+<Response [200]>
+[{'answer': 'Help with bills, payments, Direct Debits and how they work.',
+  'category': 'https://customerservices.npower.com/app/answers/list/st/5/page/1',
+  'question': 'Summary\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              'Bills & payments\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              'Readings\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              'Usage\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              'Profile'},
+ {'answer': "It's quick and simple to move home with us. Notify us about your "
+            'move today.',
+  'category': 'https://customerservices.npower.com/app/answers/list/st/5/page/1',
+  'question': 'What is a Smart meter?\n'
+              ' \n'
+              '                                                            A '
+              'clever new meter that automatically sends meter readings to '
+              'us.\n'
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Get a Smart meter\n'
+              ' \n'
+              '                                                            Log '
+              'in to book your Smart meter installation.\n'
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'About your Smart installation\n'
+              ' \n'
+              '                                                            '
+              'Find out how to prepare and what to expect on the day.\n'
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Getting the most from your Smart meter\n'
+              ' \n'
+              '                                                            '
+              'Tips to help you get to know your display and how to use it.\n'
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Smart meter rollout\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Benefits of Smart\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'How we gather your data\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Smart troubleshooting'},
+ {'answer': 'How to read your meters and send readings to npower on time.',
+  'category': 'https://customerservices.npower.com/app/answers/list/st/5/page/1',
+  'question': 'View our tariffs\n'
+              ' \n'
+              '                                                            See '
+              "our range of tariffs to meet your needs – whether it's a long "
+              "term fixed rate or doing your bit for the environment, we've "
+              'got it covered.\n'
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Customer offers\n'
+              ' \n'
+              '                                                            At '
+              'npower we offer you more. Check out our latest offers.\n'
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Is your tariff ending soon?\n'
+              ' \n'
+              '                                                            See '
+              "what's on offer and choose your next tariff.\n"
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Tariff Information Labels\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Tariff rates and charges\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Warm Home Discount'},
+ {'answer': 'Know more about meter types and identify what meter suits your '
+            'needs.',
+  'category': 'https://customerservices.npower.com/app/answers/list/st/5/page/1',
+  'question': 'Free insulation and boiler grants\n'
+              '\n'
+              '\n'
+              '                                                            '
+              'Check if you qualify under the Government ECO scheme\n'
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              'Winter boiler tips\n'
+              '\n'
+              '\n'
+              '                                                            Ten '
+              'tips to help keep your boiler running and bills low in winter'},
+ {'answer': 'Find out more about your tariff or compare others.',
+  'category': 'https://customerservices.npower.com/app/answers/list/st/5/page/1',
+  'question': 'Free insulation and boiler grants\n'
+              ' \n'
+              '                                                            '
+              'Check if you qualify under the ECO scheme.\n'
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Help managing your bills\n'
+              ' \n'
+              '                                                            '
+              "What to do if you're worried about paying your bill.\n"
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Energy saving advice\n'
+              ' \n'
+              '                                                            '
+              'Find out how you could save energy at home.\n'
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Home insulation\n'
+              ' \n'
+              '                                                            See '
+              'how much you could save on your energy bills.\n'
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Energy saving tips\n'
+              ' \n'
+              '                                                            Our '
+              'top tips for saving energy.'},
+ {'answer': 'Help with how to view your bills online, update account details '
+            'and more.',
+  'category': 'https://customerservices.npower.com/app/answers/list/st/5/page/1',
+  'question': 'Move home\n'
+              '\n'
+              '\n'
+              '                                                            '
+              'Plan ahead and avoid any unexpected costs or paying for someone '
+              "else's energy\n"
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              '\n'
+              'New to npower\n'
+              '\n'
+              '\n'
+              '                                                            If '
+              "you're moving into a property we supply, set yourself up as a "
+              'customer\n'
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Guide to moving home\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Notifying us of a bereavement\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Landlords, letting agents and third parties\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Got a prepayment meter?'},
+ {'answer': 'Advice on how to keep your home safe and who to contact in an '
+            'emergency.',
+  'category': 'https://customerservices.npower.com/app/answers/list/st/5/page/1',
+  'question': 'Bills and payments\n'
+              ' \n'
+              '                                                            '
+              'Help with your bill, balance, payments, refunds and more.\n'
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Meter readings\n'
+              ' \n'
+              '                                                            How '
+              'to read your meter, send a reading, and set up reminders.\n'
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Moving home\n'
+              ' \n'
+              '                                                            How '
+              "to let us know if you're on the move.\n"
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Extra support\n'
+              ' \n'
+              '                                                            How '
+              'to get additional help and support if you need it.\n'
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Gas and electricity tariffs\n'
+              ' \n'
+              '                                                            '
+              'Tariff info, our price promise and your rights.\n'
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Managing your account online\n'
+              ' \n'
+              '                                                            '
+              "It's easier online – we'll show you how.\n"
+              '                                                        \n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Meter types\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Energy efficiency\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Emergency and safety information\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'Contact us\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              ' \n'
+              '\n'
+              '\n'
+              '\n'
+              'npower and E.ON'}]
+customerservices.npower
+[2019-11-26 17:36:22 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-26 17:38:23 +0000] [18255] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-11-26 17:38:23 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-26 17:38:23 +0000] [18256] [DEBUG] POST /faq/extractByUrl/Hierarchy
+{'url': 'https://www.npower.com/help-and-support/bills-and-payments/your-bill-explained/', 'fileName': 'IMIFAQS', 'typeOfWebsite': 0}
+body div[class~=page-content] div div[class~=accordion] div[class~=accordion__item] a[class~=accordion__tab] div[class~=accordion__container] div[class~=accordion__tab-inner] h2[class~=accordion__title]
+body div[class~=page-content] div div[class~=accordion] div[class~=accordion__item] div[class~=accordion__content] div[class~=accordion__container] div[class~=lock-up] div[class~=lock-up__item]
+[2019-11-26 17:38:25 +0000] [18255] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+<Response [200]>
+[2019-11-26 17:38:26 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-26 17:38:26 +0000] [18256] [DEBUG] POST /faq/extractByUrl/Hierarchy
+{'url': 'https://www.npower.com/help-and-support/bills-and-payments/your-bill-explained/', 'fileName': 'IMIFAQS', 'typeOfWebsite': 0}
+<Response [200]>
+[{'answer': 'Your monthly payment is the first thing you see on your bill – '
+            'you can find it here.\n'
+            'We usually review this twice a year to make sure it covers your '
+            'usage. Depending on this, your payments could either go up or '
+            'down.\n'
+            "If this happens we'll show you any changes here, along with the "
+            "date they'll take effect.",
+  'category': 'https://www.npower.com/help-and-support/bills-and-payments/your-bill-explained/',
+  'question': 'Monthly Direct Debits'},
+ {'answer': '',
+  'category': 'https://www.npower.com/help-and-support/bills-and-payments/your-bill-explained/',
+  'question': 'Receipt of bill or quarterly Direct Debit'},
+ {'answer': "Here's your latest meter reading. We use it to work out how much "
+            "gas or electricity you've used.\n"
+            'The more readings you send, the more accurate your bills will be. '
+            "Without meter readings we have to estimate your bill, but we'll "
+            'always tell you if this happens.\n'
+            'You can send your readings online and you can set up meter read '
+            'reminders to help you remember.',
+  'category': 'https://www.npower.com/help-and-support/bills-and-payments/your-bill-explained/',
+  'question': 'Prepayment'}]
+npower
+[2019-11-26 17:38:26 +0000] [18256] [DEBUG] Closing connection.
+body div[class~=page-content] div div[class~=accordion] div[class~=accordion__item] a[class~=accordion__tab] div[class~=accordion__container] div[class~=accordion__tab-inner] h2[class~=accordion__title]
+body div[class~=page-content] div div[class~=accordion] div[class~=accordion__item] div[class~=accordion__content] div[class~=accordion__container] div[class~=lock-up] div[class~=lock-up__item]
+<Response [200]>
+<Response [200]>
+[{'answer': 'Your monthly payment is the first thing you see on your bill – '
+            'you can find it here.\n'
+            'We usually review this twice a year to make sure it covers your '
+            'usage. Depending on this, your payments could either go up or '
+            'down.\n'
+            "If this happens we'll show you any changes here, along with the "
+            "date they'll take effect.",
+  'category': 'https://www.npower.com/help-and-support/bills-and-payments/your-bill-explained/',
+  'question': 'Monthly Direct Debits'},
+ {'answer': '',
+  'category': 'https://www.npower.com/help-and-support/bills-and-payments/your-bill-explained/',
+  'question': 'Receipt of bill or quarterly Direct Debit'},
+ {'answer': "Here's your latest meter reading. We use it to work out how much "
+            "gas or electricity you've used.\n"
+            'The more readings you send, the more accurate your bills will be. '
+            "Without meter readings we have to estimate your bill, but we'll "
+            'always tell you if this happens.\n'
+            'You can send your readings online and you can set up meter read '
+            'reminders to help you remember.',
+  'category': 'https://www.npower.com/help-and-support/bills-and-payments/your-bill-explained/',
+  'question': 'Prepayment'}]
+npower
+[2019-11-26 17:38:28 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-26 17:45:24 +0000] [18256] [DEBUG] GET /faq/extract
+[2019-11-26 17:45:24 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-26 17:45:29 +0000] [18256] [DEBUG] GET /faq/
+[2019-11-26 17:45:29 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-26 18:00:51 +0000] [18255] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-11-26 18:00:52 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-26 18:00:52 +0000] [18256] [DEBUG] POST /faq/extractByUrl/Hierarchy
+{'url': 'https://www.hdfcbank.com/personal/faq/faq-inner/gts8mint-gts8miol', 'fileName': 'sasfaf', 'typeOfWebsite': 0}
+[2019-11-26 18:00:52,731] ERROR in app: Exception on /faq/extractByUrl/Hierarchy [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 30, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+ERROR:QnAApi:Exception on /faq/extractByUrl/Hierarchy [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 30, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+ERROR:root:An error occurred during a request. 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 30, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+[2019-11-26 18:00:52 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-26 18:01:01 +0000] [18256] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-11-26 18:01:02 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-26 18:01:02 +0000] [18256] [DEBUG] POST /faq/extractByUrl/Hierarchy
+{'url': 'https://www.banking.barclaysus.com/faq.html', 'fileName': 'sasfaf', 'typeOfWebsite': 0}
+body div[class~=expanded] div[class~=columns] div[class~=row] div[class~=columns] div[class~=faq__header] h1
+body div[class~=expanded] div[class~=columns] div[class~=row] div[class~=columns] div[class~=faq__header] h1
+<Response [200]>
+<Response [200]>
+[{'answer': 'We have answers.',
+  'category': 'https://www.banking.barclaysus.com/faq.html',
+  'question': 'Have questions? We have answers.'}]
+banking.barclaysus
+[2019-11-26 18:01:04 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-26 21:36:55 +0000] [18255] [DEBUG] GET /faq/extract
+[2019-11-26 21:36:55 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-28 06:52:00 +0000] [18256] [DEBUG] GET /faq/extract
+[2019-11-28 06:52:00 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-28 06:52:00 +0000] [18256] [DEBUG] GET /faq
+[2019-11-28 06:52:00 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-28 06:52:01 +0000] [18256] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-28 06:52:01 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-28 06:52:01 +0000] [18255] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-11-28 06:52:01 +0000] [18256] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-11-28 06:52:01 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-28 06:52:01 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-28 06:52:01 +0000] [18255] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-11-28 06:52:01 +0000] [18255] [DEBUG] Closing connection.
+[2019-11-28 06:52:01 +0000] [18256] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-28 06:52:01 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-28 06:52:34 +0000] [18256] [DEBUG] GET /faq
+[2019-11-28 06:52:34 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-28 06:52:34 +0000] [18256] [DEBUG] GET /faq
+[2019-11-28 06:52:34 +0000] [18256] [DEBUG] Closing connection.
+[2019-11-28 08:22:51 +0000] [23173] [DEBUG] Current configuration:
+  config: None
+  bind: ['localhost:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 2
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/FAQExtractor/Backend
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: out.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: err.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: QnAApi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7faa42735510>
+  on_reload: <function OnReload.on_reload at 0x7faa42735620>
+  when_ready: <function WhenReady.when_ready at 0x7faa42735730>
+  pre_fork: <function Prefork.pre_fork at 0x7faa42735840>
+  post_fork: <function Postfork.post_fork at 0x7faa42735950>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7faa42735a60>
+  worker_int: <function WorkerInt.worker_int at 0x7faa42735b70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7faa42735c80>
+  pre_exec: <function PreExec.pre_exec at 0x7faa42735d90>
+  pre_request: <function PreRequest.pre_request at 0x7faa42735ea0>
+  post_request: <function PostRequest.post_request at 0x7faa42735f28>
+  child_exit: <function ChildExit.child_exit at 0x7faa427540d0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7faa427541e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7faa427542f0>
+  on_exit: <function OnExit.on_exit at 0x7faa42754400>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+[2019-11-28 08:22:51 +0000] [23173] [INFO] Starting gunicorn 20.0.0
+[2019-11-28 08:22:51 +0000] [23173] [DEBUG] Arbiter booted
+[2019-11-28 08:22:51 +0000] [23173] [INFO] Listening at: http://127.0.0.1:5000 (23173)
+[2019-11-28 08:22:51 +0000] [23173] [INFO] Using worker: threads
+[2019-11-28 08:22:51 +0000] [23177] [INFO] Booting worker with pid: 23177
+[2019-11-28 08:22:51 +0000] [23178] [INFO] Booting worker with pid: 23178
+[2019-11-28 08:22:51 +0000] [23173] [DEBUG] 2 workers
+[2019-11-28 08:23:01 +0000] [23177] [DEBUG] GET /faq
+[2019-11-28 08:23:01 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:23:02 +0000] [23178] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-28 08:23:02 +0000] [23178] [DEBUG] Closing connection.
+[2019-11-28 08:23:02 +0000] [23178] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-28 08:23:02 +0000] [23178] [DEBUG] Closing connection.
+[2019-11-28 08:23:02 +0000] [23177] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-11-28 08:23:02 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:23:02 +0000] [23178] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-11-28 08:23:02 +0000] [23178] [DEBUG] Closing connection.
+[2019-11-28 08:23:02 +0000] [23177] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-11-28 08:23:02 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:23:57 +0000] [23177] [DEBUG] GET /faq
+[2019-11-28 08:23:57 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:23:57 +0000] [23177] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-28 08:23:57 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:23:57 +0000] [23177] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-11-28 08:23:57 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:23:57 +0000] [23178] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-11-28 08:23:57 +0000] [23178] [DEBUG] Closing connection.
+[2019-11-28 08:23:58 +0000] [23178] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-11-28 08:23:58 +0000] [23178] [DEBUG] Closing connection.
+[2019-11-28 08:23:58 +0000] [23178] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-28 08:23:58 +0000] [23178] [DEBUG] Closing connection.
+[2019-11-28 08:24:57 +0000] [23177] [DEBUG] GET /faq
+[2019-11-28 08:24:57 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:25:17 +0000] [23177] [DEBUG] GET /faq
+[2019-11-28 08:25:17 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:27:24 +0000] [23177] [DEBUG] GET /faq
+[2019-11-28 08:27:24 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:27:25 +0000] [23178] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-28 08:27:25 +0000] [23178] [DEBUG] Closing connection.
+[2019-11-28 08:27:25 +0000] [23177] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-11-28 08:27:25 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:27:25 +0000] [23178] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-11-28 08:27:25 +0000] [23178] [DEBUG] Closing connection.
+[2019-11-28 08:27:25 +0000] [23178] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-28 08:27:25 +0000] [23178] [DEBUG] Closing connection.
+[2019-11-28 08:27:25 +0000] [23178] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-11-28 08:27:25 +0000] [23178] [DEBUG] Closing connection.
+[2019-11-28 08:27:34 +0000] [23177] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-28 08:27:34 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:30:37 +0000] [23177] [DEBUG] GET /faq/home
+[2019-11-28 08:30:37 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:30:41 +0000] [23177] [DEBUG] GET /faq
+[2019-11-28 08:30:41 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:30:42 +0000] [23178] [DEBUG] GET /static/favicon.ico
+[2019-11-28 08:30:42 +0000] [23178] [DEBUG] Closing connection.
+[2019-11-28 08:30:43 +0000] [23177] [DEBUG] GET /faq/home
+[2019-11-28 08:30:43 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:30:46 +0000] [23178] [DEBUG] GET /faq
+[2019-11-28 08:30:46 +0000] [23178] [DEBUG] Closing connection.
+[2019-11-28 08:38:02 +0000] [23177] [DEBUG] GET /faq
+[2019-11-28 08:38:02 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:38:05 +0000] [23178] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-28 08:38:05 +0000] [23178] [DEBUG] Closing connection.
+[2019-11-28 08:41:07 +0000] [23177] [DEBUG] GET /faq
+[2019-11-28 08:41:07 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:41:20 +0000] [23178] [DEBUG] GET /faq/home
+[2019-11-28 08:41:20 +0000] [23178] [DEBUG] Closing connection.
+[2019-11-28 08:41:24 +0000] [23177] [DEBUG] GET /faq
+[2019-11-28 08:41:24 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:41:42 +0000] [23177] [DEBUG] GET /faq/home
+[2019-11-28 08:41:42 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:41:45 +0000] [23178] [DEBUG] GET /faq
+[2019-11-28 08:41:45 +0000] [23178] [DEBUG] Closing connection.
+[2019-11-28 08:41:58 +0000] [23177] [DEBUG] GET /faq
+[2019-11-28 08:41:58 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:41:58 +0000] [23177] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-28 08:41:58 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:41:58 +0000] [23177] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-11-28 08:41:58 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:41:59 +0000] [23177] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-11-28 08:41:59 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:41:59 +0000] [23177] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-28 08:41:59 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:41:59 +0000] [23178] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-11-28 08:41:59 +0000] [23178] [DEBUG] Closing connection.
+[2019-11-28 08:42:10 +0000] [23177] [DEBUG] GET /faq
+[2019-11-28 08:42:10 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:44:20 +0000] [23177] [DEBUG] GET /faq/
+[2019-11-28 08:44:20 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:44:43 +0000] [23177] [DEBUG] GET /faq/
+[2019-11-28 08:44:43 +0000] [23177] [DEBUG] Closing connection.
+[2019-11-28 08:46:59 +0000] [23236] [DEBUG] Current configuration:
+  config: None
+  bind: ['localhost:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 2
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/FAQExtractor/Backend
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: out.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: err.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: QnAApi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f6dea65c510>
+  on_reload: <function OnReload.on_reload at 0x7f6dea65c620>
+  when_ready: <function WhenReady.when_ready at 0x7f6dea65c730>
+  pre_fork: <function Prefork.pre_fork at 0x7f6dea65c840>
+  post_fork: <function Postfork.post_fork at 0x7f6dea65c950>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f6dea65ca60>
+  worker_int: <function WorkerInt.worker_int at 0x7f6dea65cb70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f6dea65cc80>
+  pre_exec: <function PreExec.pre_exec at 0x7f6dea65cd90>
+  pre_request: <function PreRequest.pre_request at 0x7f6dea65cea0>
+  post_request: <function PostRequest.post_request at 0x7f6dea65cf28>
+  child_exit: <function ChildExit.child_exit at 0x7f6dea67b0d0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f6dea67b1e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f6dea67b2f0>
+  on_exit: <function OnExit.on_exit at 0x7f6dea67b400>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+[2019-11-28 08:46:59 +0000] [23236] [INFO] Starting gunicorn 20.0.0
+[2019-11-28 08:46:59 +0000] [23236] [DEBUG] Arbiter booted
+[2019-11-28 08:46:59 +0000] [23236] [INFO] Listening at: http://127.0.0.1:5000 (23236)
+[2019-11-28 08:46:59 +0000] [23236] [INFO] Using worker: threads
+[2019-11-28 08:46:59 +0000] [23240] [INFO] Booting worker with pid: 23240
+[2019-11-28 08:46:59 +0000] [23241] [INFO] Booting worker with pid: 23241
+[2019-11-28 08:46:59 +0000] [23236] [DEBUG] 2 workers
+[2019-11-28 08:47:04 +0000] [23240] [DEBUG] GET /faq/home
+[2019-11-28 08:47:04 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 08:47:08 +0000] [23240] [DEBUG] GET /faq/
+[2019-11-28 08:47:08 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 08:47:11 +0000] [23240] [DEBUG] GET /static/favicon.ico
+[2019-11-28 08:47:11 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 08:47:17 +0000] [23240] [DEBUG] GET /faq/home
+[2019-11-28 08:47:17 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 08:47:23 +0000] [23241] [DEBUG] GET /faq
+[2019-11-28 08:47:23 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 08:48:01 +0000] [23241] [DEBUG] GET /faq
+[2019-11-28 08:48:01 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 08:48:39 +0000] [23240] [DEBUG] GET /faq
+[2019-11-28 08:48:39 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 08:48:44 +0000] [23241] [DEBUG] GET /faq
+[2019-11-28 08:48:44 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 08:49:00 +0000] [23241] [DEBUG] GET /faq/
+[2019-11-28 08:49:00 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 08:49:22 +0000] [23240] [DEBUG] GET /faq/
+[2019-11-28 08:49:22 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 08:49:22 +0000] [23240] [DEBUG] GET /static/favicon.ico
+[2019-11-28 08:49:22 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 08:56:17 +0000] [23240] [DEBUG] GET /faq/extract
+[2019-11-28 08:56:17 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 08:56:21 +0000] [23240] [DEBUG] GET /faq
+[2019-11-28 08:56:21 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 08:56:28 +0000] [23241] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-28 08:56:28 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 08:56:51 +0000] [23240] [DEBUG] GET /faq
+[2019-11-28 08:56:51 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 08:57:29 +0000] [23240] [DEBUG] GET /faq
+[2019-11-28 08:57:29 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 08:58:39 +0000] [23241] [DEBUG] GET /faq
+[2019-11-28 08:58:39 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 08:58:39 +0000] [23241] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-28 08:58:39 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 08:58:39 +0000] [23240] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-11-28 08:58:39 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 08:58:39 +0000] [23240] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-11-28 08:58:39 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 08:58:39 +0000] [23241] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-11-28 08:58:39 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 08:58:39 +0000] [23240] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-28 08:58:39 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 08:58:51 +0000] [23240] [DEBUG] GET /faq/
+[2019-11-28 08:58:51 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 08:59:38 +0000] [23240] [DEBUG] GET /faq/home
+[2019-11-28 08:59:38 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 08:59:46 +0000] [23241] [DEBUG] GET /faq
+[2019-11-28 08:59:46 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 09:00:04 +0000] [23240] [DEBUG] GET /faq
+[2019-11-28 09:00:04 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:05:04 +0000] [23240] [DEBUG] GET /faq
+[2019-11-28 09:05:04 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:06:25 +0000] [23240] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-11-28 09:06:26 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:06:26 +0000] [23241] [DEBUG] POST /faq/extractByUrl/Hierarchy
+{'url': 'https://koloxo.com/faq', 'fileName': 'faqs', 'typeOfWebsite': 2}
+body[class~=cms-page-view] div[class~=wrapper] div[class~=page] div[class~=main-container] div[class~=main] div[class~=col-main] div[class~=std] div[class~=inner_content] div[class~=section_] div[class~=content_box] div[class~=tabs] div[class~=tab] label[class~=tab-label] span
+body[class~=cms-page-view] div[class~=wrapper] div[class~=page] div[class~=main-container] div[class~=main] div[class~=col-main] div[class~=std] div[class~=inner_content] div[class~=section_] div[class~=content_box] div[class~=tabs] div[class~=tab] div[class~=tab-content] 
+<Response [200]>
+<Response [200]>
+[{'answer': 'You can submit a request on the Koloxo.com website by filling out '
+            'a form with the required information.If accepted, we will send '
+            'out a contract that must be signed and stamped which grants us '
+            'authorization of the use of images and products. Alternatively, '
+            'Koloxo.com is constantly on the lookout for new factories and we '
+            'may contact you.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'How can I get my products on Koloxo.com?'},
+ {'answer': 'Yes, Koloxo carries out various marketing campaigns. This is to '
+            'help and provide benefits to factories, as well as help products '
+            'be acknowledged globally through advertisements, etc.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'Does Koloxo carry out marketing campaigns?'},
+ {'answer': 'The factory has complete control over their selling prices and '
+            'have the flexibility to modify them.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'Can the factory control de sell price and/or the price that is '
+              'offered to the final user?'},
+ {'answer': 'Factories pay absolutely nothing. All of the logistics on '
+            'collecting the product(s) from the factory is organized and '
+            'managed by Koloxo.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'Are there any costs for the factory?'},
+ {'answer': 'The payment is made once the order has been made with the '
+            'factory.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'Does Koloxo make purchases in advance?'},
+ {'answer': 'If the product is faulty or contains defects, it is possible to '
+            'be returned within 48 hours.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'Are there any product returns for the factory?'},
+ {'answer': 'The contract is signed by Factory to Client S.L, situated at '
+            "C/Girona s/n, Pol. Industrial l'Empalme, Llorenç del Penedés, "
+            '43712, Tarragona, Spain.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'Who signs the contract with the factory?'},
+ {'answer': 'It is not necessary for the factory to make products available '
+            'exclusively through Koloxo however, they have the option to do '
+            'so.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'Does the factory have to commit some exclusivity to Koloxo?'},
+ {'answer': 'Yes, factories have the option to hide their products from '
+            'specific countries. This can be noted on the "Product Template" '
+            'which is supplied to factories after submitting their request.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'Can I choose where to sell my products?'},
+ {'answer': 'Yes, the factory may provide mandatory images as well as '
+            'authorization to use the images on the website. Images must be a '
+            'high resolution ".JPG" format and preferably with a white '
+            'background.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'Must the factory supply product images?'},
+ {'answer': 'Users can create a Koloxo.com account by selecting "Create '
+            'Account". From there, they must input their name, surname, email '
+            'and a strong password. For logging in, customers can simply click '
+            'the "Log In" link in the top right corner of the website where '
+            'they will be prompted to input their credentials.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'Frequently asked questions related to the End-User;'},
+ {'answer': "Koloxo.com's website layout is meant to be user-friendly, "
+            'providing easy-to-see links and images throughout. Making it easy '
+            'for users and customers to browse the website without any '
+            'difficulties.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'How do I sign up and log into the Koloxo.com website?'},
+ {'answer': 'Yes, all products come straight from the factories of their '
+            'country of origin to guarantee their authenticity.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'Is Koloxo.com hard to use?'},
+ {'answer': 'A product origin is the country where the product is '
+            'manufactured. Koloxo.com works directly with factories so that '
+            'all products are directly from the manufacturer.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'Are the products on Koloxo.com authentic?'},
+ {'answer': 'If a customer orders a product that is out of stock (for reasons '
+            'such as the site not being updated or the product is no longer '
+            'being provided), they can choose to have the product replaced '
+            'with a similar product.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'What are product origins?'},
+ {'answer': "Koloxo's central office is located in Oman.",
+  'category': 'https://koloxo.com/faq',
+  'question': 'The product I ordered is out of stock. What do I do?'},
+ {'answer': "-\tYes, Koloxo.com's Logistics Hubs consolidate your order into "
+            'one shipment.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'Where is the Koloxo Central Office?'},
+ {'answer': '-\tYes, however some products are not available in certain '
+            'countries specified by the manufacturer.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'Frequently asked questions regarding Shipping and Delivery.'},
+ {'answer': '-\tShipments normally arrive within 3 – 4 days the moment the '
+            'arrangement with the courier has been made. Please note that '
+            'shipments may take longer depending on the location, product in '
+            'question and size, up to a maximum of 15 days.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'If I place an order with products from different countries, '
+              'will I receive it in one shipment?'},
+ {'answer': '-\tYou can view a full list of shipping countries on our Shipping '
+            'page.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'Are all products available for shipping to all delivery '
+              'countries?'},
+ {'answer': '-\tWe will provide the name of the courier service and a tracking '
+            'number via SMS or email for your shipment once it leaves our '
+            'Logistic Hub.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'How long does a Shipment take to arrive?'},
+ {'answer': '-\tDelivery costs take into account various factors such as '
+            'destination, size and weight of the shipment and its contents. '
+            'Depending on the courier we use, which depends on your location '
+            'and the origin of the manufacturer. With the factors taken into '
+            'account, a delivery cost is calculated which is reflected on the '
+            'total of the invoice. Day to day we are improving the number of '
+            'local and international couriers in order to obtain a more '
+            'precise rate that appeal more to the customer.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'What countries fulfil the shipment?'},
+ {'answer': '-\tYour shipment is coming directly from the factory through our '
+            'logistics system.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'How can I see where my shipment is?'},
+ {'answer': '-\tThe final cost of your order is shown before you check out on '
+            'koloxo.com. There are no added costs at the time of delivery.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'How much does the delivery cost?'},
+ {'answer': '-\tYou are able to change the shipping address after you confirm '
+            'your shipment. However, you only have 1 – 2 days to do so. If you '
+            'want to change your shipping address and the shipment is already '
+            'in transit, you must contact the courier your shipment is being '
+            'delivered with and request to change the address.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'Where is my shipment coming from?'},
+ {'answer': '-\tProducts that are to be returned due to defects or damage may '
+            'be returned within 48 hours (2 days) of receiving the delivery. '
+            'Please note that some products may be excluded from returns under '
+            'certain circumstances. For more information, visit our Shipping, '
+            'Refund and Payment Policies page.',
+  'category': 'https://koloxo.com/faq',
+  'question': 'Is there any added cost at the time of delivery?'}]
+koloxo
+[2019-11-28 09:06:30 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 09:07:30 +0000] [23240] [DEBUG] GET /faq/extract
+[2019-11-28 09:07:30 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:07:34 +0000] [23240] [DEBUG] GET /faq/extract
+[2019-11-28 09:07:34 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:07:39 +0000] [23241] [DEBUG] GET /faq
+[2019-11-28 09:07:39 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 09:07:59 +0000] [23240] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-11-28 09:07:59 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:39:58 +0000] [23241] [DEBUG] GET /faq
+[2019-11-28 09:39:58 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 09:39:58 +0000] [23240] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-28 09:39:58 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:39:58 +0000] [23240] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-11-28 09:39:58 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:39:58 +0000] [23240] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-11-28 09:39:58 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:39:58 +0000] [23241] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-11-28 09:39:58 +0000] [23241] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-28 09:39:58 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 09:39:58 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 09:49:08 +0000] [23241] [DEBUG] GET /faq/home
+[2019-11-28 09:49:08 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 09:49:20 +0000] [23240] [DEBUG] GET /faq
+[2019-11-28 09:49:20 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:49:22 +0000] [23241] [DEBUG] GET /static/favicon.ico
+[2019-11-28 09:49:22 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 09:49:50 +0000] [23240] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-28 09:49:50 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:50:37 +0000] [23240] [DEBUG] GET /faq
+[2019-11-28 09:50:37 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:51:23 +0000] [23240] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-28 09:51:23 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:51:55 +0000] [23241] [DEBUG] GET /faq
+[2019-11-28 09:51:55 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 09:51:55 +0000] [23241] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-28 09:51:55 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 09:51:55 +0000] [23241] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-11-28 09:51:55 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 09:51:55 +0000] [23240] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-11-28 09:51:55 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:51:55 +0000] [23240] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-11-28 09:51:55 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:51:55 +0000] [23240] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-28 09:51:55 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:52:03 +0000] [23240] [DEBUG] GET /static/favicon.ico
+[2019-11-28 09:52:03 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:52:49 +0000] [23241] [DEBUG] GET /faq
+[2019-11-28 09:52:49 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 09:53:45 +0000] [23240] [DEBUG] GET /faq
+[2019-11-28 09:53:45 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:54:05 +0000] [23240] [DEBUG] GET /faq
+[2019-11-28 09:54:05 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:54:06 +0000] [23241] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-11-28 09:54:06 +0000] [23241] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-28 09:54:06 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 09:54:06 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 09:54:06 +0000] [23241] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-11-28 09:54:06 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 09:54:06 +0000] [23241] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-11-28 09:54:06 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 09:54:06 +0000] [23241] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-28 09:54:06 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 09:54:40 +0000] [23240] [DEBUG] GET /faq
+[2019-11-28 09:54:40 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 09:55:15 +0000] [23240] [DEBUG] GET /faq
+[2019-11-28 09:55:15 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 10:03:29 +0000] [23240] [DEBUG] GET /faq
+[2019-11-28 10:03:29 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 10:19:14 +0000] [23241] [DEBUG] GET /faq
+[2019-11-28 10:19:14 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 10:19:17 +0000] [23240] [DEBUG] GET /faq/extract
+[2019-11-28 10:19:17 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 10:19:28 +0000] [23241] [DEBUG] GET /faq
+[2019-11-28 10:19:28 +0000] [23241] [DEBUG] Closing connection.
+[2019-11-28 10:19:52 +0000] [23240] [DEBUG] GET /faq/home
+[2019-11-28 10:19:52 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 10:20:06 +0000] [23240] [DEBUG] GET /faq
+[2019-11-28 10:20:06 +0000] [23240] [DEBUG] Closing connection.
+[2019-11-28 10:42:32 +0000] [23672] [DEBUG] Current configuration:
+  config: None
+  bind: ['localhost:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 2
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/FAQExtractor/Backend
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: out.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: err.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: QnAApi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fbef6de4510>
+  on_reload: <function OnReload.on_reload at 0x7fbef6de4620>
+  when_ready: <function WhenReady.when_ready at 0x7fbef6de4730>
+  pre_fork: <function Prefork.pre_fork at 0x7fbef6de4840>
+  post_fork: <function Postfork.post_fork at 0x7fbef6de4950>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fbef6de4a60>
+  worker_int: <function WorkerInt.worker_int at 0x7fbef6de4b70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fbef6de4c80>
+  pre_exec: <function PreExec.pre_exec at 0x7fbef6de4d90>
+  pre_request: <function PreRequest.pre_request at 0x7fbef6de4ea0>
+  post_request: <function PostRequest.post_request at 0x7fbef6de4f28>
+  child_exit: <function ChildExit.child_exit at 0x7fbef6e020d0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fbef6e021e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fbef6e022f0>
+  on_exit: <function OnExit.on_exit at 0x7fbef6e02400>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+[2019-11-28 10:42:32 +0000] [23672] [INFO] Starting gunicorn 20.0.0
+[2019-11-28 10:42:32 +0000] [23672] [DEBUG] Arbiter booted
+[2019-11-28 10:42:32 +0000] [23672] [INFO] Listening at: http://127.0.0.1:5000 (23672)
+[2019-11-28 10:42:32 +0000] [23672] [INFO] Using worker: threads
+[2019-11-28 10:42:32 +0000] [23676] [INFO] Booting worker with pid: 23676
+[2019-11-28 10:42:32 +0000] [23678] [INFO] Booting worker with pid: 23678
+[2019-11-28 10:42:32 +0000] [23672] [DEBUG] 2 workers
+[2019-11-28 10:42:41 +0000] [23676] [DEBUG] GET /faq
+[2019-11-28 10:42:41 +0000] [23676] [DEBUG] Closing connection.
+[2019-11-28 10:42:43 +0000] [23676] [DEBUG] GET /faq/home
+[2019-11-28 10:42:43 +0000] [23676] [DEBUG] Closing connection.
+[2019-11-28 10:42:44 +0000] [23678] [DEBUG] GET /faq/home
+[2019-11-28 10:42:44 +0000] [23678] [DEBUG] Closing connection.
+[2019-11-28 10:42:44 +0000] [23676] [DEBUG] GET /faq/home
+[2019-11-28 10:42:44 +0000] [23676] [DEBUG] Closing connection.
+[2019-11-28 10:42:45 +0000] [23678] [DEBUG] GET /faq/home
+[2019-11-28 10:42:45 +0000] [23678] [DEBUG] Closing connection.
+[2019-11-28 10:42:46 +0000] [23678] [DEBUG] GET /static/favicon.ico
+[2019-11-28 10:42:46 +0000] [23678] [DEBUG] Closing connection.
+[2019-11-28 10:42:47 +0000] [23676] [DEBUG] GET /faq/extract
+[2019-11-28 10:42:47 +0000] [23676] [DEBUG] Closing connection.
+[2019-11-28 10:42:47 +0000] [23678] [DEBUG] GET /static/favicon.ico
+[2019-11-28 10:42:47 +0000] [23678] [DEBUG] Closing connection.
+[2019-11-28 10:42:47 +0000] [23676] [DEBUG] GET /faq/extract
+[2019-11-28 10:42:47 +0000] [23676] [DEBUG] Closing connection.
+[2019-11-28 10:42:48 +0000] [23676] [DEBUG] GET /faq/extract
+[2019-11-28 10:42:48 +0000] [23676] [DEBUG] Closing connection.
+[2019-11-28 10:43:31 +0000] [23672] [INFO] Handling signal: hup
+[2019-11-28 10:43:31 +0000] [23672] [INFO] Hang up: Master
+[2019-11-28 10:43:31 +0000] [23672] [DEBUG] Current configuration:
+  config: None
+  bind: ['localhost:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 2
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/FAQExtractor/Backend
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: out.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: err.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: QnAApi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fbef6de4510>
+  on_reload: <function OnReload.on_reload at 0x7fbef6de4620>
+  when_ready: <function WhenReady.when_ready at 0x7fbef6de4730>
+  pre_fork: <function Prefork.pre_fork at 0x7fbef6de4840>
+  post_fork: <function Postfork.post_fork at 0x7fbef6de4950>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fbef6de4a60>
+  worker_int: <function WorkerInt.worker_int at 0x7fbef6de4b70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fbef6de4c80>
+  pre_exec: <function PreExec.pre_exec at 0x7fbef6de4d90>
+  pre_request: <function PreRequest.pre_request at 0x7fbef6de4ea0>
+  post_request: <function PostRequest.post_request at 0x7fbef6de4f28>
+  child_exit: <function ChildExit.child_exit at 0x7fbef6e020d0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fbef6e021e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fbef6e022f0>
+  on_exit: <function OnExit.on_exit at 0x7fbef6e02400>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+[2019-11-28 10:43:31 +0000] [23690] [INFO] Booting worker with pid: 23690
+[2019-11-28 10:43:31 +0000] [23691] [INFO] Booting worker with pid: 23691
+[2019-11-28 11:54:30 +0000] [23690] [DEBUG] GET /faq
+[2019-11-28 11:54:30 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-28 11:54:30 +0000] [23691] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-11-28 11:54:30 +0000] [23690] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-28 11:54:30 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-28 11:54:30 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-28 11:54:30 +0000] [23690] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-11-28 11:54:30 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-28 11:54:30 +0000] [23690] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-28 11:54:30 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-28 11:54:30 +0000] [23690] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-11-28 11:54:30 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-28 11:55:02 +0000] [23691] [DEBUG] GET /faq/home
+[2019-11-28 11:55:02 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-28 11:55:02 +0000] [23691] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-28 11:55:02 +0000] [23690] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-28 11:55:02 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-28 11:55:02 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-28 11:55:02 +0000] [23691] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-11-28 11:55:02 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-28 11:55:02 +0000] [23691] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-11-28 11:55:02 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-28 11:55:02 +0000] [23691] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-11-28 11:55:02 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-28 11:55:28 +0000] [23690] [DEBUG] GET /faq/extract
+[2019-11-28 11:55:28 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-28 11:55:28 +0000] [23690] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-28 11:55:28 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-28 11:55:28 +0000] [23691] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-28 11:55:28 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-28 11:55:28 +0000] [23690] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-11-28 11:55:28 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-28 11:55:28 +0000] [23691] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-11-28 11:55:28 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-28 11:55:28 +0000] [23690] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-11-28 11:55:28 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-28 11:56:44 +0000] [23690] [DEBUG] GET /faq
+[2019-11-28 11:56:44 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-28 11:56:44 +0000] [23690] [DEBUG] GET /faq/extract
+[2019-11-28 11:56:44 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-28 11:56:45 +0000] [23691] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-28 11:56:45 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-28 11:56:45 +0000] [23690] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-11-28 11:56:45 +0000] [23691] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-11-28 11:56:45 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-28 11:56:45 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-28 11:56:45 +0000] [23690] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-28 11:56:45 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-28 11:56:45 +0000] [23690] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-11-28 11:56:45 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-28 11:57:33 +0000] [23691] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-11-28 11:57:33 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-28 12:02:09 +0000] [23690] [DEBUG] GET /faq/home
+[2019-11-28 12:02:09 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-28 12:02:44 +0000] [23690] [DEBUG] GET /faq/home
+[2019-11-28 12:02:44 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-28 12:02:59 +0000] [23691] [DEBUG] GET /faq/extract
+[2019-11-28 12:02:59 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-28 12:03:19 +0000] [23691] [DEBUG] GET /faq
+[2019-11-28 12:03:19 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-28 12:04:13 +0000] [23690] [DEBUG] GET /faq
+[2019-11-28 12:04:13 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-28 12:04:42 +0000] [23690] [DEBUG] GET /faq
+[2019-11-28 12:04:42 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-29 05:43:21 +0000] [23690] [DEBUG] GET /faq
+[2019-11-29 05:43:21 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-29 05:43:21 +0000] [23691] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-11-29 05:43:21 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-29 05:43:21 +0000] [23691] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-11-29 05:43:21 +0000] [23690] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-29 05:43:21 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-29 05:43:21 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-29 05:43:22 +0000] [23690] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-11-29 05:43:22 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-29 05:43:22 +0000] [23690] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-29 05:43:22 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-29 12:38:09 +0000] [23690] [DEBUG] GET /faq
+[2019-11-29 12:38:09 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-29 12:38:09 +0000] [23691] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-29 12:38:09 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-29 12:38:09 +0000] [23690] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-29 12:38:09 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-29 12:38:10 +0000] [23690] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-11-29 12:38:10 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-29 12:38:10 +0000] [23690] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-11-29 12:38:10 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-29 12:38:10 +0000] [23691] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-11-29 12:38:10 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-30 07:19:39 +0000] [23691] [DEBUG] GET /faq
+[2019-11-30 07:19:39 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-30 07:19:40 +0000] [23690] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-30 07:19:40 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-30 07:19:40 +0000] [23691] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-11-30 07:19:40 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-30 07:19:40 +0000] [23691] [DEBUG] GET /static/runtime-es5.24b02acc1f369d9b9f37.js
+[2019-11-30 07:19:40 +0000] [23691] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-11-30 07:19:40 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-30 07:19:40 +0000] [23691] [DEBUG] GET /static/polyfills-es5.3aa54d3e5134f5b5b842.js
+[2019-11-30 07:19:40 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-30 07:19:40 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-30 07:19:40 +0000] [23691] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-11-30 07:19:40 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-30 07:19:40 +0000] [23690] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-11-30 07:19:40 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-30 07:19:40 +0000] [23691] [DEBUG] GET /static/main-es5.95de961a64dee9fee543.js
+[2019-11-30 07:19:40 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-30 07:19:48 +0000] [23691] [DEBUG] GET /static/favicon.ico
+[2019-11-30 07:19:48 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-30 07:19:53 +0000] [23690] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-30 07:19:53 +0000] [23690] [DEBUG] Closing connection.
+[2019-11-30 07:20:59 +0000] [23691] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-11-30 07:20:59 +0000] [23691] [DEBUG] Closing connection.
+[2019-11-30 09:12:09 +0000] [23690] [DEBUG] GET /faq/home
+[2019-11-30 09:12:09 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-02 07:30:41 +0000] [23691] [DEBUG] GET /faq
+[2019-12-02 07:30:41 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-02 07:30:42 +0000] [23690] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-12-02 07:30:42 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-02 07:30:42 +0000] [23691] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-12-02 07:30:42 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-02 07:30:42 +0000] [23691] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-12-02 07:30:42 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-02 07:30:42 +0000] [23691] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-12-02 07:30:42 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-02 07:30:42 +0000] [23691] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-12-02 07:30:42 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-02 07:43:58 +0000] [23690] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-12-02 07:43:59 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-02 08:16:14 +0000] [23691] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-12-02 08:16:15 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-02 08:58:54 +0000] [23690] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-12-02 08:58:54 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-02 09:05:36 +0000] [23690] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-12-02 09:05:36 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-02 10:54:34 +0000] [23690] [DEBUG] GET /faq
+[2019-12-02 10:54:34 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-02 10:54:34 +0000] [23691] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-12-02 10:54:34 +0000] [23690] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-12-02 10:54:34 +0000] [23690] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-12-02 10:54:34 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-02 10:54:34 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-02 10:54:34 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-02 10:54:34 +0000] [23690] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-12-02 10:54:35 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-02 10:54:35 +0000] [23691] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-12-02 10:54:35 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 10:28:02 +0000] [23691] [DEBUG] GET /faq/home
+[2019-12-03 10:28:02 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 10:28:02 +0000] [23691] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-12-03 10:28:02 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 10:28:02 +0000] [23691] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-12-03 10:28:02 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 10:28:02 +0000] [23690] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-12-03 10:28:02 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 10:28:02 +0000] [23691] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-12-03 10:28:02 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 10:28:02 +0000] [23690] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-12-03 10:28:02 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 10:28:05 +0000] [23690] [DEBUG] GET /faq
+[2019-12-03 10:28:05 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 10:28:05 +0000] [23690] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-12-03 10:28:05 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 10:28:05 +0000] [23690] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-12-03 10:28:05 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 10:28:05 +0000] [23691] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-12-03 10:28:05 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 10:28:05 +0000] [23691] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-12-03 10:28:05 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 10:28:21 +0000] [23691] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-12-03 10:28:22 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 10:28:22 +0000] [23691] [DEBUG] POST /faq/extractByUrl/Hierarchy
+{'url': '', 'fileName': '', 'typeOfWebsite': 2}
+[2019-12-03 10:28:23,464] ERROR in app: Exception on /faq/extractByUrl/Hierarchy [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 104, in getQnAWithHierarchy
+    content = requests.get(url)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/sessions.py", line 519, in request
+    prep = self.prepare_request(req)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/sessions.py", line 462, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/models.py", line 313, in prepare
+    self.prepare_url(url, params)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/models.py", line 387, in prepare_url
+    raise MissingSchema(error)
+requests.exceptions.MissingSchema: Invalid URL '': No schema supplied. Perhaps you meant http://?
+ERROR:root:An error occurred during a request. 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 104, in getQnAWithHierarchy
+    content = requests.get(url)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/sessions.py", line 519, in request
+    prep = self.prepare_request(req)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/sessions.py", line 462, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/models.py", line 313, in prepare
+    self.prepare_url(url, params)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/requests/models.py", line 387, in prepare_url
+    raise MissingSchema(error)
+requests.exceptions.MissingSchema: Invalid URL '': No schema supplied. Perhaps you meant http://?
+[2019-12-03 10:28:23 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 10:28:33 +0000] [23691] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-12-03 10:28:33 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 11:01:44 +0000] [23690] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-12-03 11:01:44 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 11:06:56 +0000] [23690] [DEBUG] GET /faq
+[2019-12-03 11:06:56 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 11:06:56 +0000] [23691] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-12-03 11:06:56 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 11:06:56 +0000] [23690] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-12-03 11:06:56 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 11:06:56 +0000] [23690] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-12-03 11:06:56 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 11:06:56 +0000] [23690] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-12-03 11:06:56 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 11:06:56 +0000] [23690] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-12-03 11:06:56 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 11:08:02 +0000] [23691] [DEBUG] POST /faq/extractByUrl/Hierarchy
+{'url': 'https://experience.imiconnect.io/faqs/'}
+body[class~=page-template] div[class~=wrapper] div[class~=repl] section[class~=p-t-60] div[class~=row] div[class~=col-sm-12] div[class~=panel-group] div[class~=panel] div[class~=panel-heading] h4[class~=panel-title] a
+body[class~=page-template] div[class~=wrapper] div[class~=repl] section[class~=p-t-60] div[class~=row] div[class~=col-sm-12] div[class~=panel-group] div[class~=panel] div[class~=panel-collapse] div[class~=panel-body] div
+<Response [200]>
+<Response [200]>
+[{'answer': "If you've lost your card or it's been stolen, it's important to "
+            'call us as soon as you can, so we can cancel your card.\n'
+            'From the UK 0800 151 XXXX.From abroad +44 1604 230 XXX.You can '
+            'also use our Next Generation Text or SignVideo service.\n'
+            "Check your statement in case there's been any fraudulent activity "
+            "on your card. We'll get your new card to you within three to five "
+            'working days.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'My Credit Card is lost or stolen, what do I need to do?'},
+ {'answer': 'Yes, you can use your card overseas. You just pay single, '
+            'non-sterling transaction fee of 2.99% on each transaction when '
+            "you buy something or withdraw cash abroad. Plus, you'll benefit "
+            "from the 'up to 56-day interest free' period if your balance is "
+            'repaid in full by your payment due date.\n'
+            "You'll find information about fees and charges in your monthly "
+            'statement.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'Can I use my card abroad and will I be charged?'},
+ {'answer': 'If you think there has been fraud on your card or bank account – '
+            'or if you suspect anyone has attempted to compromise your '
+            'financial details – report it immediately to us on 0300 123 XXXX '
+            'or alternately, you can reach us on any of our digital channels '
+            'including WhatsApp, Messenger.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'How do I report a suspected fraud?'},
+ {'answer': 'You can request a replacement card in MyBank account service.\n'
+            "Simply log into your MyBank online service and select 'Order a "
+            "replacement card', which you'll find under 'Accounts & Services' "
+            'in the top menu. Once we receive your request you should receive '
+            'your replacement card within 5 working days. For security '
+            'reasons, we send replacement cards to the primary account '
+            "holder's address. \n"
+            'In case your replacement card is delayed, your old card will '
+            'still be active for a few weeks.\n'
+            'Alternatively you can contact our Customer Services Team.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'How do I order a replacement of MyBank Credit Card?'},
+ {'answer': 'For UK transactions there is no daily limit on contactless '
+            'payments, however there is a limit of £30 per transaction and you '
+            'need to have enough money in your account to cover the cost of '
+            'your purchase.\n'
+            'Alternatively you can contact our Customer Services Team.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'Do I have a daily limit for contactless payments?'},
+ {'answer': 'You can view your transactions by logging into MyBank card online '
+            'service. Your transactions can be found on your account summary '
+            "page, and under 'Statements' in the top menu.",
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'How can I view my transactions?'},
+ {'answer': 'MyBank Card Secure is a free service that provides customers with '
+            'the ability to protect their online purchases against fraud. When '
+            'going through online checkout you may be asked to enter your '
+            'chosen password as well as your card details. Without the '
+            'password the transaction will not go through.\n'
+            'You will be invited to register for MyBank Card Secure the first '
+            'time you make an online transaction that requires a password.\n'
+            'Your MyBank Card Secure password must contain between 6 and 15 '
+            'characters, and must contain at least 1 letter and 1 number, and '
+            'must not be similar to either your log in name or personal '
+            'message.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'How do I register for a secure card?'},
+ {'answer': 'If you enter the wrong number three times when making a purchase, '
+            "even if it's at three separate stores, your PIN will be locked "
+            "and you won't be able to use it in any store until it's unlocked. "
+            "To unlock your PIN you'll need to visit a UK cash machine and "
+            'enter your PIN correctly. This will automatically unlock your '
+            'PIN. \n'
+            'You have three attempts to enter your PIN correctly in a UK cash '
+            'machine. If you enter the wrong number three times your PIN will '
+            "be locked. You'll need to contact our Customer Services Team to "
+            'unlock your card or if your card has been retained by a cash '
+            'machine.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'What happens if I get my secure pin wrong?'},
+ {'answer': "Yes, you have exactly the same fraud protection as you've always "
+            "had. You'll be refunded for any fraud carried out on your "
+            "account, plus any interest you've paid. Your purchase protection "
+            'rights, which include Section 75 and Chargeback, will stay the '
+            'same, too.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'Will MyBank Secure still protect me from fraud?'},
+ {'answer': 'Anything you buy online will still go through and be assessed by '
+            'MyBank card Secure. However, depending on your previous purchase '
+            'history, you may no longer be asked to enter your password, so '
+            "you can whizz through checkout quicker. If you're not asked to "
+            "enter your password, you'll see a message saying 'MyBank card is "
+            "currently verifying your transaction', so you'll know your "
+            'transaction is being processed.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': "How will I know if my transaction's gone through MyBank card "
+              'Secure?'}]
+experience.imiconnect
+[2019-12-03 11:08:04 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 11:10:17 +0000] [23690] [DEBUG] POST /faq/extractByUrl/NLP
+{'url': 'https://experience.imiconnect.io/faqs/'}
+[2019-12-03 11:10:18 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 11:12:19 +0000] [23691] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-12-03 11:12:20 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 11:15:23 +0000] [23690] [DEBUG] POST /faq/extractByUrl/Hierarchy
+{'url': 'https://experience.imiconnect.io/faqs/'}
+body[class~=page-template] div[class~=wrapper] div[class~=repl] section[class~=p-t-60] div[class~=row] div[class~=col-sm-12] div[class~=panel-group] div[class~=panel] div[class~=panel-heading] h4[class~=panel-title] a
+body[class~=page-template] div[class~=wrapper] div[class~=repl] section[class~=p-t-60] div[class~=row] div[class~=col-sm-12] div[class~=panel-group] div[class~=panel] div[class~=panel-collapse] div[class~=panel-body] div
+<Response [200]>
+<Response [200]>
+[{'answer': "If you've lost your card or it's been stolen, it's important to "
+            'call us as soon as you can, so we can cancel your card.\n'
+            'From the UK 0800 151 XXXX.From abroad +44 1604 230 XXX.You can '
+            'also use our Next Generation Text or SignVideo service.\n'
+            "Check your statement in case there's been any fraudulent activity "
+            "on your card. We'll get your new card to you within three to five "
+            'working days.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'My Credit Card is lost or stolen, what do I need to do?'},
+ {'answer': 'Yes, you can use your card overseas. You just pay single, '
+            'non-sterling transaction fee of 2.99% on each transaction when '
+            "you buy something or withdraw cash abroad. Plus, you'll benefit "
+            "from the 'up to 56-day interest free' period if your balance is "
+            'repaid in full by your payment due date.\n'
+            "You'll find information about fees and charges in your monthly "
+            'statement.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'Can I use my card abroad and will I be charged?'},
+ {'answer': 'If you think there has been fraud on your card or bank account – '
+            'or if you suspect anyone has attempted to compromise your '
+            'financial details – report it immediately to us on 0300 123 XXXX '
+            'or alternately, you can reach us on any of our digital channels '
+            'including WhatsApp, Messenger.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'How do I report a suspected fraud?'},
+ {'answer': 'You can request a replacement card in MyBank account service.\n'
+            "Simply log into your MyBank online service and select 'Order a "
+            "replacement card', which you'll find under 'Accounts & Services' "
+            'in the top menu. Once we receive your request you should receive '
+            'your replacement card within 5 working days. For security '
+            'reasons, we send replacement cards to the primary account '
+            "holder's address. \n"
+            'In case your replacement card is delayed, your old card will '
+            'still be active for a few weeks.\n'
+            'Alternatively you can contact our Customer Services Team.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'How do I order a replacement of MyBank Credit Card?'},
+ {'answer': 'For UK transactions there is no daily limit on contactless '
+            'payments, however there is a limit of £30 per transaction and you '
+            'need to have enough money in your account to cover the cost of '
+            'your purchase.\n'
+            'Alternatively you can contact our Customer Services Team.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'Do I have a daily limit for contactless payments?'},
+ {'answer': 'You can view your transactions by logging into MyBank card online '
+            'service. Your transactions can be found on your account summary '
+            "page, and under 'Statements' in the top menu.",
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'How can I view my transactions?'},
+ {'answer': 'MyBank Card Secure is a free service that provides customers with '
+            'the ability to protect their online purchases against fraud. When '
+            'going through online checkout you may be asked to enter your '
+            'chosen password as well as your card details. Without the '
+            'password the transaction will not go through.\n'
+            'You will be invited to register for MyBank Card Secure the first '
+            'time you make an online transaction that requires a password.\n'
+            'Your MyBank Card Secure password must contain between 6 and 15 '
+            'characters, and must contain at least 1 letter and 1 number, and '
+            'must not be similar to either your log in name or personal '
+            'message.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'How do I register for a secure card?'},
+ {'answer': 'If you enter the wrong number three times when making a purchase, '
+            "even if it's at three separate stores, your PIN will be locked "
+            "and you won't be able to use it in any store until it's unlocked. "
+            "To unlock your PIN you'll need to visit a UK cash machine and "
+            'enter your PIN correctly. This will automatically unlock your '
+            'PIN. \n'
+            'You have three attempts to enter your PIN correctly in a UK cash '
+            'machine. If you enter the wrong number three times your PIN will '
+            "be locked. You'll need to contact our Customer Services Team to "
+            'unlock your card or if your card has been retained by a cash '
+            'machine.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'What happens if I get my secure pin wrong?'},
+ {'answer': "Yes, you have exactly the same fraud protection as you've always "
+            "had. You'll be refunded for any fraud carried out on your "
+            "account, plus any interest you've paid. Your purchase protection "
+            'rights, which include Section 75 and Chargeback, will stay the '
+            'same, too.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'Will MyBank Secure still protect me from fraud?'},
+ {'answer': 'Anything you buy online will still go through and be assessed by '
+            'MyBank card Secure. However, depending on your previous purchase '
+            'history, you may no longer be asked to enter your password, so '
+            "you can whizz through checkout quicker. If you're not asked to "
+            "enter your password, you'll see a message saying 'MyBank card is "
+            "currently verifying your transaction', so you'll know your "
+            'transaction is being processed.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': "How will I know if my transaction's gone through MyBank card "
+              'Secure?'}]
+experience.imiconnect
+[2019-12-03 11:15:24 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 11:15:30 +0000] [23691] [DEBUG] POST /faq/extractByUrl/NLP
+{'url': 'https://experience.imiconnect.io/faqs/'}
+[2019-12-03 11:15:31 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 11:15:36 +0000] [23691] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-12-03 11:15:36 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 15:32:02 +0000] [23690] [DEBUG] OPTIONS /faq/extractByUrl/GetData/Firebase
+[2019-12-03 15:32:02 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 15:32:02 +0000] [23690] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-12-03 15:32:03 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 15:32:03 +0000] [23691] [DEBUG] OPTIONS /faq/extractByUrl/Hierarchy
+[2019-12-03 15:32:03 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 15:32:03 +0000] [23690] [DEBUG] POST /faq/extractByUrl/Hierarchy
+{'url': 'https://www.google.com', 'fileName': '', 'typeOfWebsite': 0}
+[2019-12-03 15:32:03,990] ERROR in app: Exception on /faq/extractByUrl/Hierarchy [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+ERROR:root:An error occurred during a request. 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+[2019-12-03 15:32:03 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 15:32:18 +0000] [23690] [DEBUG] OPTIONS /faq/extractByUrl/GetData/Firebase
+[2019-12-03 15:32:18 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 15:32:18 +0000] [23691] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-12-03 15:32:19 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 15:32:19 +0000] [23690] [DEBUG] OPTIONS /faq/extractByUrl/Hierarchy
+[2019-12-03 15:32:19 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 15:32:19 +0000] [23691] [DEBUG] POST /faq/extractByUrl/Hierarchy
+{'url': 'https://www.google.com', 'fileName': '', 'typeOfWebsite': 0}
+[2019-12-03 15:32:20,144] ERROR in app: Exception on /faq/extractByUrl/Hierarchy [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+ERROR:QnAApi:Exception on /faq/extractByUrl/Hierarchy [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+ERROR:root:An error occurred during a request. 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+[2019-12-03 15:32:20 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 15:32:41 +0000] [23690] [DEBUG] OPTIONS /faq/extractByUrl/GetData/Firebase
+[2019-12-03 15:32:41 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 15:32:41 +0000] [23691] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-12-03 15:32:41 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 15:32:42 +0000] [23690] [DEBUG] OPTIONS /faq/extractByUrl/Hierarchy
+[2019-12-03 15:32:42 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 15:32:42 +0000] [23690] [DEBUG] POST /faq/extractByUrl/Hierarchy
+{'url': 'https://google.com', 'fileName': '', 'typeOfWebsite': 0}
+[2019-12-03 15:32:42,722] ERROR in app: Exception on /faq/extractByUrl/Hierarchy [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+ERROR:QnAApi:Exception on /faq/extractByUrl/Hierarchy [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+ERROR:root:An error occurred during a request. 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+[2019-12-03 15:32:42 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 15:32:48 +0000] [23690] [DEBUG] OPTIONS /faq/extractByUrl/GetData/Firebase
+[2019-12-03 15:32:48 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 15:32:48 +0000] [23690] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-12-03 15:32:49 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 16:42:45 +0000] [23690] [DEBUG] POST /faq/extractByUrl/GetData/Firebase
+[2019-12-03 16:42:45 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 16:43:13 +0000] [23690] [DEBUG] POST /faq/extractByUrl/Hierarchy
+{'url': 'https://www.google.com'}
+[2019-12-03 16:43:14,259] ERROR in app: Exception on /faq/extractByUrl/Hierarchy [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+ERROR:QnAApi:Exception on /faq/extractByUrl/Hierarchy [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+ERROR:root:An error occurred during a request. 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+[2019-12-03 16:43:14 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 16:44:41 +0000] [23690] [DEBUG] POST /faq/extractByUrl/Hierarchy
+{'url': 'https://www.google.com'}
+[2019-12-03 16:44:41,945] ERROR in app: Exception on /faq/extractByUrl/Hierarchy [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+ERROR:QnAApi:Exception on /faq/extractByUrl/Hierarchy [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+ERROR:root:An error occurred during a request. 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+[2019-12-03 16:44:41 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 16:45:53 +0000] [23691] [DEBUG] POST /faq/extractByUrl/Hierarchy
+{'url': 'https://www.google.com'}
+[2019-12-03 16:45:55,605] ERROR in app: Exception on /faq/extractByUrl/Hierarchy [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+ERROR:QnAApi:Exception on /faq/extractByUrl/Hierarchy [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+ERROR:root:An error occurred during a request. 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+[2019-12-03 16:45:55 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-03 16:46:03 +0000] [23690] [DEBUG] POST /faq/extractByUrl/Hierarchy
+{'url': 'https://www.google.com'}
+[2019-12-03 16:46:04,282] ERROR in app: Exception on /faq/extractByUrl/Hierarchy [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+ERROR:QnAApi:Exception on /faq/extractByUrl/Hierarchy [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+ERROR:root:An error occurred during a request. 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FAQExtractor/Backend/QnAApi.py", line 32, in fetchByUrl_Hierarchy
+    QnADict = getQnAWithHierarchy(req_data["url"])
+  File "/home/ubuntu/FAQExtractor/Backend/QnAMain.py", line 108, in getQnAWithHierarchy
+    QnA = tools.fetchQnAWithHtmlText(sentences)
+  File "/home/ubuntu/FAQExtractor/Backend/Utility.py", line 114, in fetchQnAWithHtmlText
+    for k in range(indexOfQuestions[len(indexOfQuestions)-1], len(sentences)):
+IndexError: list index out of range
+[2019-12-03 16:46:04 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-03 16:46:21 +0000] [23690] [DEBUG] POST /faq/extractByUrl/Hierarchy
+{'url': 'https://experience.imiconnect.io/faqs/'}
+body[class~=page-template] div[class~=wrapper] div[class~=repl] section[class~=p-t-60] div[class~=row] div[class~=col-sm-12] div[class~=panel-group] div[class~=panel] div[class~=panel-heading] h4[class~=panel-title] a
+body[class~=page-template] div[class~=wrapper] div[class~=repl] section[class~=p-t-60] div[class~=row] div[class~=col-sm-12] div[class~=panel-group] div[class~=panel] div[class~=panel-collapse] div[class~=panel-body] div
+<Response [200]>
+<Response [200]>
+[{'answer': "If you've lost your card or it's been stolen, it's important to "
+            'call us as soon as you can, so we can cancel your card.\n'
+            'From the UK 0800 151 XXXX.From abroad +44 1604 230 XXX.You can '
+            'also use our Next Generation Text or SignVideo service.\n'
+            "Check your statement in case there's been any fraudulent activity "
+            "on your card. We'll get your new card to you within three to five "
+            'working days.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'My Credit Card is lost or stolen, what do I need to do?'},
+ {'answer': 'Yes, you can use your card overseas. You just pay single, '
+            'non-sterling transaction fee of 2.99% on each transaction when '
+            "you buy something or withdraw cash abroad. Plus, you'll benefit "
+            "from the 'up to 56-day interest free' period if your balance is "
+            'repaid in full by your payment due date.\n'
+            "You'll find information about fees and charges in your monthly "
+            'statement.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'Can I use my card abroad and will I be charged?'},
+ {'answer': 'If you think there has been fraud on your card or bank account – '
+            'or if you suspect anyone has attempted to compromise your '
+            'financial details – report it immediately to us on 0300 123 XXXX '
+            'or alternately, you can reach us on any of our digital channels '
+            'including WhatsApp, Messenger.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'How do I report a suspected fraud?'},
+ {'answer': 'You can request a replacement card in MyBank account service.\n'
+            "Simply log into your MyBank online service and select 'Order a "
+            "replacement card', which you'll find under 'Accounts & Services' "
+            'in the top menu. Once we receive your request you should receive '
+            'your replacement card within 5 working days. For security '
+            'reasons, we send replacement cards to the primary account '
+            "holder's address. \n"
+            'In case your replacement card is delayed, your old card will '
+            'still be active for a few weeks.\n'
+            'Alternatively you can contact our Customer Services Team.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'How do I order a replacement of MyBank Credit Card?'},
+ {'answer': 'For UK transactions there is no daily limit on contactless '
+            'payments, however there is a limit of £30 per transaction and you '
+            'need to have enough money in your account to cover the cost of '
+            'your purchase.\n'
+            'Alternatively you can contact our Customer Services Team.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'Do I have a daily limit for contactless payments?'},
+ {'answer': 'You can view your transactions by logging into MyBank card online '
+            'service. Your transactions can be found on your account summary '
+            "page, and under 'Statements' in the top menu.",
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'How can I view my transactions?'},
+ {'answer': 'MyBank Card Secure is a free service that provides customers with '
+            'the ability to protect their online purchases against fraud. When '
+            'going through online checkout you may be asked to enter your '
+            'chosen password as well as your card details. Without the '
+            'password the transaction will not go through.\n'
+            'You will be invited to register for MyBank Card Secure the first '
+            'time you make an online transaction that requires a password.\n'
+            'Your MyBank Card Secure password must contain between 6 and 15 '
+            'characters, and must contain at least 1 letter and 1 number, and '
+            'must not be similar to either your log in name or personal '
+            'message.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'How do I register for a secure card?'},
+ {'answer': 'If you enter the wrong number three times when making a purchase, '
+            "even if it's at three separate stores, your PIN will be locked "
+            "and you won't be able to use it in any store until it's unlocked. "
+            "To unlock your PIN you'll need to visit a UK cash machine and "
+            'enter your PIN correctly. This will automatically unlock your '
+            'PIN. \n'
+            'You have three attempts to enter your PIN correctly in a UK cash '
+            'machine. If you enter the wrong number three times your PIN will '
+            "be locked. You'll need to contact our Customer Services Team to "
+            'unlock your card or if your card has been retained by a cash '
+            'machine.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'What happens if I get my secure pin wrong?'},
+ {'answer': "Yes, you have exactly the same fraud protection as you've always "
+            "had. You'll be refunded for any fraud carried out on your "
+            "account, plus any interest you've paid. Your purchase protection "
+            'rights, which include Section 75 and Chargeback, will stay the '
+            'same, too.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': 'Will MyBank Secure still protect me from fraud?'},
+ {'answer': 'Anything you buy online will still go through and be assessed by '
+            'MyBank card Secure. However, depending on your previous purchase '
+            'history, you may no longer be asked to enter your password, so '
+            "you can whizz through checkout quicker. If you're not asked to "
+            "enter your password, you'll see a message saying 'MyBank card is "
+            "currently verifying your transaction', so you'll know your "
+            'transaction is being processed.',
+  'category': 'https://experience.imiconnect.io/faqs/',
+  'question': "How will I know if my transaction's gone through MyBank card "
+              'Secure?'}]
+experience.imiconnect
+[2019-12-03 16:46:23 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-04 07:20:08 +0000] [23690] [DEBUG] GET /faq
+[2019-12-04 07:20:08 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-04 07:20:08 +0000] [23690] [DEBUG] GET /static/styles.8ec74379b81798f5f78d.css
+[2019-12-04 07:20:08 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-04 07:20:08 +0000] [23690] [DEBUG] GET /static/polyfills-es2015.fd917e7c3ed57f282ee5.js
+[2019-12-04 07:20:08 +0000] [23690] [DEBUG] Closing connection.
+[2019-12-04 07:20:09 +0000] [23691] [DEBUG] GET /static/main-es2015.95de961a64dee9fee543.js
+[2019-12-04 07:20:09 +0000] [23691] [DEBUG] GET /static/scripts.40017fedad433f6baec1.js
+[2019-12-04 07:20:09 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-04 07:20:09 +0000] [23691] [DEBUG] Closing connection.
+[2019-12-04 07:20:09 +0000] [23691] [DEBUG] GET /static/runtime-es2015.24b02acc1f369d9b9f37.js
+[2019-12-04 07:20:09 +0000] [23691] [DEBUG] Closing connection.
