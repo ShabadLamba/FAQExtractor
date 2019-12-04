@@ -27,16 +27,24 @@ def home():
 def fetchByUrl_Hierarchy():
     print(request.get_json())
     tools = Utility()
-    user = fb.firebaseAuth()  # Authenticating Firebase
     req_data = request.get_json()
-    QnADict = getQnAWithHierarchy(req_data["url"])
-    if(len(QnADict) != 0):
-        fb.setData(user, tools.encryptUrl(req_data["url"]).decode(), QnADict)
-        return jsonify(QnADict)
+    try:
+        if(req_data and (tools.decryptUrl((req_data["access_token"].encode())).decode()) == "paxzibydpdztcbiicgndskzgpqnicm"):
+            user = fb.firebaseAuth()  # Authenticating Firebase
+            QnADict = getQnAWithHierarchy(req_data["url"])
+            if(len(QnADict) != 0):
+                fb.setData(user, tools.encryptUrl(
+                    req_data["url"]).decode(), QnADict)
+                return jsonify(QnADict)
 
-    else:
-        return {"error": True,
-                "message": "FAQs couldn't be fetched"}
+            else:
+                return {"error": True,
+                        "message": "FAQs couldn't be fetched"}
+    except:
+        return {
+            "error": True,
+            "message": "Authentication Error"
+        }
 
 
 @app.route('/faq/extractByUrl/NLP', methods=["POST"])
@@ -44,8 +52,15 @@ def fetchByUrl_NLP():
     print(request.get_json())
     user = fb.firebaseAuth()  # Authenticating Firebase
     req_data = request.get_json()
-    QnADict = getQnAWithNPL(req_data["url"])
-    return jsonify(QnADict)
+    try:
+        if(req_data and (tools.decryptUrl((req_data["access_token"].encode())).decode()) == "paxzibydpdztcbiicgndskzgpqnicm"):
+            QnADict = getQnAWithNPL(req_data["url"])
+            return jsonify(QnADict)
+    except:
+        return {
+            "error": True,
+            "message": "Authentication Error"
+        }
 
 
 @app.route('/faq/extractByUrl/GetData/Firebase', methods=["POST"])
@@ -53,18 +68,25 @@ def fetchByUrl_GetDataFromFirebase():
     tools = Utility()
     user = fb.firebaseAuth()  # Authenticating Firebase
     req_data = request.get_json()
-    qnaCollectionOrderedDict = fb.getData()
-    listOfKeys = []
-    for key in qnaCollectionOrderedDict:
-        listOfKeys.append(key)
-    listOfUrls = []
-    for keys in listOfKeys:
-        # print(listOfKeys[])
-        listOfUrls.append(tools.decryptUrl(keys.encode()).decode())
-    for url in listOfUrls:
-        if(url == req_data["url"]):
-            return jsonify(qnaCollectionOrderedDict[listOfKeys[listOfUrls.index(url)]])
-    return jsonify([False])
+    try:
+        if(req_data and (tools.decryptUrl((req_data["access_token"].encode())).decode()) == "paxzibydpdztcbiicgndskzgpqnicm"):
+            qnaCollectionOrderedDict = fb.getData()
+            listOfKeys = []
+            for key in qnaCollectionOrderedDict:
+                listOfKeys.append(key)
+            listOfUrls = []
+            for keys in listOfKeys:
+                # print(listOfKeys[])
+                listOfUrls.append(tools.decryptUrl(keys.encode()).decode())
+            for url in listOfUrls:
+                if(url == req_data["url"]):
+                    return jsonify(qnaCollectionOrderedDict[listOfKeys[listOfUrls.index(url)]])
+            return jsonify([False])
+    except:
+        return {
+            "error": True,
+            "message": "Authentication Error"
+        }
 
 
 @app.route("/faq/heartbeat", methods=["GET"])
@@ -102,4 +124,4 @@ def server_error(e):
 #     return
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True, port=5000)
+    app.run(host='127.0.0.1', debug=True, port=5000)
