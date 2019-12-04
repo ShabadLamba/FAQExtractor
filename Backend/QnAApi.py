@@ -29,14 +29,14 @@ def fetchByUrl_Hierarchy():
     tools = Utility()
     user = fb.firebaseAuth()  # Authenticating Firebase
     req_data = request.get_json()
-    QnADict = getQnAWithHierarchy(req_data["url"])      
+    QnADict = getQnAWithHierarchy(req_data["url"])
     if(len(QnADict) != 0):
         fb.setData(user, tools.encryptUrl(req_data["url"]).decode(), QnADict)
         return jsonify(QnADict)
-        
+
     else:
-        return "FAQs couldn't be fetched"
-    
+        return {"error": True,
+                "message": "FAQs couldn't be fetched"}
 
 
 @app.route('/faq/extractByUrl/NLP', methods=["POST"])
