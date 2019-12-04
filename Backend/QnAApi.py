@@ -33,8 +33,17 @@ def fetchByUrl_Hierarchy():
             user = fb.firebaseAuth()  # Authenticating Firebase
             QnADict = getQnAWithHierarchy(req_data["url"])
             if(len(QnADict) != 0):
-                fb.setData(user, tools.encryptUrl(
-                    req_data["url"]).decode(), QnADict)
+                qnaCollectionOrderedDict = fb.getData()
+                listOfKeys = []
+                for key in qnaCollectionOrderedDict:
+                    listOfKeys.append(key)
+                listOfUrls = []
+                for keys in listOfKeys:
+                    # print(listOfKeys[])
+                    listOfUrls.append(tools.decryptUrl(keys.encode()).decode())
+                if(req_data["url"] not in listOfUrls):
+                    fb.setData(user, tools.encryptUrl(
+                        req_data["url"]).decode(), QnADict)
                 return jsonify(QnADict)
 
             else:
@@ -124,4 +133,4 @@ def server_error(e):
 #     return
 
 if __name__ == "__main__":
-    app.run(host='127.0.0.1', debug=True, port=5000)
+    app.run(host='0.0.0.0', debug=True, port=5000)
