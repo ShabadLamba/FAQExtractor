@@ -26,7 +26,7 @@ export class ExtractPageComponent implements OnInit, OnChanges {
   constructor(
     private extractFAQApi: ExtractPageApiService,
     private router: Router
-  ) {}
+  ) { }
 
   extractPageTitle = "Extract Questions And Answers";
   @Input() url = "";
@@ -44,6 +44,8 @@ export class ExtractPageComponent implements OnInit, OnChanges {
   // tslint:disable-next-line: variable-name
   fetchData(url_: string, fileName_: string, typeOfWebsite_: number) {
     const body: FAQ = {
+      // tslint:disable-next-line: max-line-length
+      access_token: 'gAAAAABd54JjdQJuW4NCIQopW_uPmVi5Yl8hiF-et3CEflvABusLeHa9KsmONFa7XlVrFKcsPoB726W0_Q6Dur7Md4LR47UQF5XZhol64TpkW9WYpdiIBTA=',
       url: url_,
       fileName: fileName_,
       typeOfWebsite: typeOfWebsite_
@@ -82,7 +84,7 @@ export class ExtractPageComponent implements OnInit, OnChanges {
     );
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   ngOnChanges(changes: SimpleChanges): void {
     this.isDataFetched = false;
