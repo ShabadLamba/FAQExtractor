@@ -52,12 +52,12 @@ export class ExtractPageComponent implements OnInit, OnChanges {
     };
     this.isDataFetched = false;
     this.showData = false;
-    console.log(body);
+    // console.log(body);
     this.extractFAQApi.fetchQnAFromFirebase(body).subscribe(
       // tslint:disable-next-line: triple-equals
       value => {
         if (!value[0]) {
-          console.log(!value[0]);
+          // console.log(!value[0]);
           this.extractFAQApi.fetchQnA(body).subscribe(
             value => {
               console.log("Inside Value");

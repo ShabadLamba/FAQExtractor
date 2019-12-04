@@ -28,7 +28,7 @@ export class AppService {
     const array = typeof objArray !== 'object' ? JSON.parse(objArray) : objArray;
     let str = '';
     let row = 'S.No,';
-    console.log(Object.keys(array[0]));
+    // console.log(Object.keys(array[0]));
 
     // tslint:disable-next-line: forin
     for (const index in headerList) {

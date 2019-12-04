@@ -31,7 +31,7 @@ export class DataDisplayComponent implements OnInit {
     private db: AngularFireDatabase,
     private extractFAQApi: ExtractPageApiService,
     private appService: AppService
-  ) {}
+  ) { }
 
   /*
     Variables
@@ -58,7 +58,7 @@ export class DataDisplayComponent implements OnInit {
 
   toggleShowData() {
     if (!this.showData) {
-      console.log(this.listOfQnA);
+      // console.log(this.listOfQnA);
       this.getData();
     } else {
       this.listOfQnA = [];
@@ -91,7 +91,7 @@ export class DataDisplayComponent implements OnInit {
       )
     ) {
       // tslint:disable-next-line: only-arrow-functions
-      this.listOfSelectedQnA = this.listOfSelectedQnA.filter(function(value) {
+      this.listOfSelectedQnA = this.listOfSelectedQnA.filter(function (value) {
         return value !== selectedElement;
       });
     } else {
@@ -108,8 +108,8 @@ export class DataDisplayComponent implements OnInit {
     } else {
       this.listOfSelectedQnA = [...this.listOfQnA];
     }
-    console.log("List Of Questions ", this.listOfQnA);
-    console.log("List Of Selected Questions ", this.listOfSelectedQnA);
+    // console.log("List Of Questions ", this.listOfQnA);
+    // console.log("List Of Selected Questions ", this.listOfSelectedQnA);
   }
 
   download() {
