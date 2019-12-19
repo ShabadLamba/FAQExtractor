@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { API_URL } from '../env';
 import { FAQ } from './extract-page.model';
+import * as Auth0 from 'auth0-web';
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +16,12 @@ export class ExtractPageApiService {
   // GET list of public, future events
   fetchQnA(body: FAQ): Observable<FAQ[]> {
     // tslint:disable-next-line: max-line-length
-    const output: Observable<any> = this.http.post(`${API_URL}/faq/extractByUrl/Hierarchy`, body)
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${Auth0.getAccessToken()}`
+      })
+    };
+    const output: Observable<any> = this.http.post(`${API_URL}/v2/faq/extractByUrl/Hierarchy`, body, httpOptions)
       // .catch(this.handleError);
       .pipe(catchError((err) => {
         console.log('Error: Unable to complete request...', err.message);
@@ -25,7 +32,28 @@ export class ExtractPageApiService {
 
   fetchQnAFromFirebase(body: FAQ): Observable<FAQ[]> {
     // tslint:disable-next-line: max-line-length
-    const output: Observable<any> = this.http.post(`${API_URL}/faq/extractByUrl/GetData/Firebase`, body)
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${Auth0.getAccessToken()}`
+      })
+    };
+    const output: Observable<any> = this.http.post(`${API_URL}/v2/faq/extractByUrl/GetData/Firebase`, body, httpOptions)
+      // .catch(this.handleError);
+      .pipe(catchError((err) => {
+        console.log('Error: Unable to complete request...', err.message);
+        return throwError(err);
+      }));
+    return output;
+  }
+
+  fetchQnANLP(body: FAQ): Observable<FAQ[]> {
+    // tslint:disable-next-line: max-line-length
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${Auth0.getAccessToken()}`
+      })
+    };
+    const output: Observable<any> = this.http.post(`${API_URL}/v2/faq/extractByUrl/NLP`, body, httpOptions)
       // .catch(this.handleError);
       .pipe(catchError((err) => {
         console.log('Error: Unable to complete request...', err.message);

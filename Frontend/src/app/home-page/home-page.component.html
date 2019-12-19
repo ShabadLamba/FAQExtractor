@@ -6,6 +6,25 @@
         <h6 class="masthead-subheading">
           A single Faq Bank for all for all your queries
         </h6>
+        <div>
+          <button
+            class="btn btn-primary"
+            (click)="signIn()"
+            *ngIf="!authenticated"
+          >
+            Sign In
+          </button>
+          <button
+            class="btn btn-primary"
+            (click)="signOut()"
+            *ngIf="authenticated"
+          >
+            Sign Out
+          </button>
+          <p style="padding-top: 20px;" *ngIf="authenticated">
+            Hello, {{ getProfile().name }}
+          </p>
+        </div>
       </div>
     </div>
   </header>
@@ -16,7 +35,10 @@
         <div class="col-lg-6 order-lg-2">
           <div>
             <a
-              [routerLink]="['/faq/extract']"
+              [routerLink]="[
+                '/faq/extract',
+                { ifAuthenticated: authenticated }
+              ]"
               class="btn btn-primary btn-xl-right col-9"
               >Extract</a
             >

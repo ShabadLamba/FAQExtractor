@@ -2,11 +2,12 @@ from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
 from QnAMain import *
 import logging
-
+from Authentication import auth
 
 app = Flask(__name__, static_folder='static',
             template_folder='static')
-CORS(app, resources={r'/faq*': {"origins": "*"}})
+CORS(app, resources={r'/v2/faq*': {"origins": "*"},
+                     r'/v1/faq*': {"origins": "*"}})
 
 ### Fire Initialization ###
 fb = firebaseUtil()
@@ -22,8 +23,8 @@ fb = firebaseUtil()
 def home():
     return render_template('index.html')
 
-
-@app.route('/faq/extractByUrl/Hierarchy', methods=["POST"])
+############################ v1 ####################################
+@app.route('/v1/faq/extractByUrl/Hierarchy', methods=["POST"])
 def fetchByUrl_Hierarchy():
     print(request.get_json())
     tools = Utility()
@@ -56,14 +57,17 @@ def fetchByUrl_Hierarchy():
         }
 
 
-@app.route('/faq/extractByUrl/NLP', methods=["POST"])
+@app.route('/v1/faq/extractByUrl/NLP', methods=["POST"])
 def fetchByUrl_NLP():
     print(request.get_json())
     user = fb.firebaseAuth()  # Authenticating Firebase
+    tools = Utility()
     req_data = request.get_json()
     try:
         if(req_data and (tools.decryptUrl((req_data["access_token"].encode())).decode()) == "paxzibydpdztcbiicgndskzgpqnicm"):
+            print("Inside")
             QnADict = getQnAWithNPL(req_data["url"])
+            print(QnADict)
             return jsonify(QnADict)
     except:
         return {
@@ -72,7 +76,7 @@ def fetchByUrl_NLP():
         }
 
 
-@app.route('/faq/extractByUrl/GetData/Firebase', methods=["POST"])
+@app.route('/v1/faq/extractByUrl/GetData/Firebase', methods=["POST"])
 def fetchByUrl_GetDataFromFirebase():
     tools = Utility()
     user = fb.firebaseAuth()  # Authenticating Firebase
@@ -96,6 +100,89 @@ def fetchByUrl_GetDataFromFirebase():
             "error": True,
             "message": "Authentication Error"
         }
+#######################################################################
+
+############################## v2 #####################################
+@app.route('/v2/faq/extractByUrl/Hierarchy', methods=["POST"])
+@auth.requires_auth
+def fetchByUrl_Hierarchy_v2():
+    print(request.get_json())
+    tools = Utility()
+    req_data = request.get_json()
+    try:
+        # and (tools.decryptUrl((req_data["access_token"].encode())).decode()) == "paxzibydpdztcbiicgndskzgpqnicm"):
+        if(req_data):
+            user = fb.firebaseAuth()  # Authenticating Firebase
+            QnADict = getQnAWithHierarchy(req_data["url"])
+            if(len(QnADict) != 0):
+                qnaCollectionOrderedDict = fb.getData()
+                listOfKeys = []
+                for key in qnaCollectionOrderedDict:
+                    listOfKeys.append(key)
+                listOfUrls = []
+                for keys in listOfKeys:
+                    # print(listOfKeys[])
+                    listOfUrls.append(tools.decryptUrl(keys.encode()).decode())
+                if(req_data["url"] not in listOfUrls):
+                    fb.setData(user, tools.encryptUrl(
+                        req_data["url"]).decode(), QnADict)
+                return jsonify(QnADict)
+
+            else:
+                return {"error": True,
+                        "message": "FAQs couldn't be fetched"}
+    except:
+        return {
+            "error": True,
+            "message": "Authentication Error"
+        }
+
+
+@app.route('/v2/faq/extractByUrl/NLP', methods=["POST"])
+@auth.requires_auth
+def fetchByUrl_NLP_v2():
+    print(request.get_json())
+    user = fb.firebaseAuth()  # Authenticating Firebase
+    req_data = request.get_json()
+    try:
+        # and (tools.decryptUrl((req_data["access_token"].encode())).decode()) == "paxzibydpdztcbiicgndskzgpqnicm"):
+        if(req_data):
+            QnADict = getQnAWithNPL(req_data["url"])
+            return jsonify(QnADict)
+    except:
+        return {
+            "error": True,
+            "message": "Authentication Error"
+        }
+
+
+@app.route('/v2/faq/extractByUrl/GetData/Firebase', methods=["POST"])
+@auth.requires_auth
+def fetchByUrl_GetDataFromFirebase_v2():
+    tools = Utility()
+    user = fb.firebaseAuth()  # Authenticating Firebase
+    req_data = request.get_json()
+    try:
+        # and (tools.decryptUrl((req_data["access_token"].encode())).decode()) == "paxzibydpdztcbiicgndskzgpqnicm"):
+        if(req_data):
+            qnaCollectionOrderedDict = fb.getData()
+            listOfKeys = []
+            for key in qnaCollectionOrderedDict:
+                listOfKeys.append(key)
+            listOfUrls = []
+            for keys in listOfKeys:
+                # print(listOfKeys[])
+                listOfUrls.append(tools.decryptUrl(keys.encode()).decode())
+            for url in listOfUrls:
+                if(url == req_data["url"]):
+                    return jsonify(qnaCollectionOrderedDict[listOfKeys[listOfUrls.index(url)]])
+            return jsonify([False])
+    except:
+        return {
+            "error": True,
+            "message": "Authentication Error"
+        }
+###################################################################################
 
 
 @app.route("/faq/heartbeat", methods=["GET"])

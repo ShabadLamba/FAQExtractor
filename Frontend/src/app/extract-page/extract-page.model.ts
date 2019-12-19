@@ -5,7 +5,8 @@ export class FAQ {
     // tslint:disable-next-line: variable-name
     public access_token: string,
     public fileName?: string,
-    public typeOfWebsite?: number
+    public typeOfWebsite?: number,
+    public methodOfExtraction?: number
     // tslint:disable-next-line: variable-name
 
   ) {
