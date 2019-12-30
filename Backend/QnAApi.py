@@ -6,8 +6,8 @@ from Authentication import auth
 
 app = Flask(__name__, static_folder='static',
             template_folder='static', static_url_path="/faq/static")
-CORS(app, resources={r'/v2/faq*': {"origins": "*"},
-                     r'/v1/faq*': {"origins": "*"}})
+CORS(app, resources={r'/faq/v2*': {"origins": "*"},
+                     r'/faq/v1*': {"origins": "*"}})
 
 ### Fire Initialization ###
 fb = firebaseUtil()
@@ -30,7 +30,7 @@ def home():
 #     return redirect('/')
 
 ############################ v1 ####################################
-@app.route('/v1/faq/extractByUrl/Hierarchy', methods=["POST"])
+@app.route('/faq/v1/extractByUrl/Hierarchy', methods=["POST"])
 def fetchByUrl_Hierarchy():
     print(request.get_json())
     tools = Utility()
@@ -63,7 +63,7 @@ def fetchByUrl_Hierarchy():
         }
 
 
-@app.route('/v1/faq/extractByUrl/NLP', methods=["POST"])
+@app.route('/faq/v1/extractByUrl/NLP', methods=["POST"])
 def fetchByUrl_NLP():
     print(request.get_json())
     user = fb.firebaseAuth()  # Authenticating Firebase
@@ -82,7 +82,7 @@ def fetchByUrl_NLP():
         }
 
 
-@app.route('/v1/faq/extractByUrl/GetData/Firebase', methods=["POST"])
+@app.route('/faq/v1/extractByUrl/GetData/Firebase', methods=["POST"])
 def fetchByUrl_GetDataFromFirebase():
     tools = Utility()
     user = fb.firebaseAuth()  # Authenticating Firebase
@@ -109,7 +109,7 @@ def fetchByUrl_GetDataFromFirebase():
 #######################################################################
 
 ############################## v2 #####################################
-@app.route('/v2/faq/extractByUrl/Hierarchy', methods=["POST"])
+@app.route('/faq/v2/extractByUrl/Hierarchy', methods=["POST"])
 @auth.requires_auth
 def fetchByUrl_Hierarchy_v2():
     print(request.get_json())
@@ -144,7 +144,7 @@ def fetchByUrl_Hierarchy_v2():
         }
 
 
-@app.route('/v2/faq/extractByUrl/NLP', methods=["POST"])
+@app.route('/faq/v2/extractByUrl/NLP', methods=["POST"])
 @auth.requires_auth
 def fetchByUrl_NLP_v2():
     print(request.get_json())
@@ -162,7 +162,7 @@ def fetchByUrl_NLP_v2():
         }
 
 
-@app.route('/v2/faq/extractByUrl/GetData/Firebase', methods=["POST"])
+@app.route('/faq/v2/extractByUrl/GetData/Firebase', methods=["POST"])
 @auth.requires_auth
 def fetchByUrl_GetDataFromFirebase_v2():
     tools = Utility()

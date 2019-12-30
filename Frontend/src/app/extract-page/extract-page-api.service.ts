@@ -21,7 +21,7 @@ export class ExtractPageApiService {
         'Authorization': `Bearer ${Auth0.getAccessToken()}`
       })
     };
-    const output: Observable<any> = this.http.post(`${API_URL}/v2/faq/extractByUrl/Hierarchy`, body, httpOptions)
+    const output: Observable<any> = this.http.post(`https://dev.imibot.ai/faq/v2/extractByUrl/Hierarchy`, body, httpOptions)
       // .catch(this.handleError);
       .pipe(catchError((err) => {
         console.log('Error: Unable to complete request...', err.message);
@@ -37,7 +37,7 @@ export class ExtractPageApiService {
         'Authorization': `Bearer ${Auth0.getAccessToken()}`
       })
     };
-    const output: Observable<any> = this.http.post(`${API_URL}/v2/faq/extractByUrl/GetData/Firebase`, body, httpOptions)
+    const output: Observable<any> = this.http.post(`https://dev.imibot.ai/faq/v2/extractByUrl/GetData/Firebase`, body, httpOptions)
       // .catch(this.handleError);
       .pipe(catchError((err) => {
         console.log('Error: Unable to complete request...', err.message);
@@ -53,7 +53,7 @@ export class ExtractPageApiService {
         'Authorization': `Bearer ${Auth0.getAccessToken()}`
       })
     };
-    const output: Observable<any> = this.http.post(`${API_URL}/v2/faq/extractByUrl/NLP`, body, httpOptions)
+    const output: Observable<any> = this.http.post(`https://dev.imibot.ai/faq/v2/extractByUrl/NLP`, body, httpOptions)
       // .catch(this.handleError);
       .pipe(catchError((err) => {
         console.log('Error: Unable to complete request...', err.message);
