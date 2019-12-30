@@ -11,7 +11,10 @@
 
   <body>
     <app-root></app-root>
-    <script src="static/runtime.8fbc2fd6f12647d93e24.js" defer></script>
+    <script
+      src="{{ url_for('static',filename='runtime.8fbc2fd6f12647d93e24.js',_external=True) }}"
+      defer
+    ></script>
     <script
       src="static/polyfills-es5.744eefa6afbb128665fd.js"
       nomodule
