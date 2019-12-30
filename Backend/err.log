@@ -20524,3 +20524,225 @@ ModuleNotFoundError: No module named 'jose'
 [2019-12-30 09:11:16 +0000] [20084] [DEBUG] Closing connection.
 [2019-12-30 09:12:19 +0000] [20083] [DEBUG] OPTIONS /faq/extractByUrl/Hierarchy
 [2019-12-30 09:12:19 +0000] [20083] [DEBUG] Closing connection.
+[2019-12-30 09:16:54 +0000] [20187] [DEBUG] Current configuration:
+  config: None
+  bind: ['localhost:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 2
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/FAQExtractor/Backend
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: out.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: err.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: QnAApi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fecf3a81510>
+  on_reload: <function OnReload.on_reload at 0x7fecf3a81620>
+  when_ready: <function WhenReady.when_ready at 0x7fecf3a81730>
+  pre_fork: <function Prefork.pre_fork at 0x7fecf3a81840>
+  post_fork: <function Postfork.post_fork at 0x7fecf3a81950>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fecf3a81a60>
+  worker_int: <function WorkerInt.worker_int at 0x7fecf3a81b70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fecf3a81c80>
+  pre_exec: <function PreExec.pre_exec at 0x7fecf3a81d90>
+  pre_request: <function PreRequest.pre_request at 0x7fecf3a81ea0>
+  post_request: <function PostRequest.post_request at 0x7fecf3a81f28>
+  child_exit: <function ChildExit.child_exit at 0x7fecf3aa20d0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fecf3aa21e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fecf3aa22f0>
+  on_exit: <function OnExit.on_exit at 0x7fecf3aa2400>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+[2019-12-30 09:16:54 +0000] [20187] [INFO] Starting gunicorn 20.0.0
+[2019-12-30 09:16:54 +0000] [20187] [DEBUG] Arbiter booted
+[2019-12-30 09:16:54 +0000] [20187] [INFO] Listening at: http://127.0.0.1:5000 (20187)
+[2019-12-30 09:16:54 +0000] [20187] [INFO] Using worker: threads
+[2019-12-30 09:16:54 +0000] [20191] [INFO] Booting worker with pid: 20191
+[2019-12-30 09:16:54 +0000] [20192] [INFO] Booting worker with pid: 20192
+[2019-12-30 09:16:54 +0000] [20187] [DEBUG] 2 workers
+[2019-12-30 09:17:08 +0000] [20191] [DEBUG] GET /faq
+[2019-12-30 09:17:08 +0000] [20191] [DEBUG] Closing connection.
+[2019-12-30 09:17:10 +0000] [20192] [DEBUG] GET /faq
+[2019-12-30 09:17:10 +0000] [20192] [DEBUG] Closing connection.
+[2019-12-30 09:17:10 +0000] [20191] [DEBUG] GET /faq
+[2019-12-30 09:17:10 +0000] [20191] [DEBUG] Closing connection.
+[2019-12-30 09:17:11 +0000] [20192] [DEBUG] GET /faq
+[2019-12-30 09:17:11 +0000] [20192] [DEBUG] Closing connection.
+[2019-12-30 09:17:11 +0000] [20191] [DEBUG] GET /faq
+[2019-12-30 09:17:11 +0000] [20191] [DEBUG] Closing connection.
+[2019-12-30 09:17:11 +0000] [20192] [DEBUG] GET /faq
+[2019-12-30 09:17:11 +0000] [20192] [DEBUG] Closing connection.
+[2019-12-30 09:17:12 +0000] [20191] [DEBUG] GET /faq
+[2019-12-30 09:17:12 +0000] [20191] [DEBUG] Closing connection.
+[2019-12-30 09:17:12 +0000] [20191] [DEBUG] GET /faq
+[2019-12-30 09:17:12 +0000] [20191] [DEBUG] Closing connection.
+[2019-12-30 09:17:37 +0000] [20192] [DEBUG] GET /faq
+[2019-12-30 09:17:37 +0000] [20192] [DEBUG] Closing connection.
+[2019-12-30 09:20:39 +0000] [20192] [DEBUG] GET /faq
+[2019-12-30 09:20:39 +0000] [20192] [DEBUG] Closing connection.
+[2019-12-30 09:20:40 +0000] [20191] [DEBUG] GET /faq
+[2019-12-30 09:20:40 +0000] [20191] [DEBUG] Closing connection.
+[2019-12-30 09:21:28 +0000] [20242] [DEBUG] Current configuration:
+  config: None
+  bind: ['localhost:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 2
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/FAQExtractor/Backend
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: out.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: err.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: QnAApi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fc00ce73510>
+  on_reload: <function OnReload.on_reload at 0x7fc00ce73620>
+  when_ready: <function WhenReady.when_ready at 0x7fc00ce73730>
+  pre_fork: <function Prefork.pre_fork at 0x7fc00ce73840>
+  post_fork: <function Postfork.post_fork at 0x7fc00ce73950>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fc00ce73a60>
+  worker_int: <function WorkerInt.worker_int at 0x7fc00ce73b70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fc00ce73c80>
+  pre_exec: <function PreExec.pre_exec at 0x7fc00ce73d90>
+  pre_request: <function PreRequest.pre_request at 0x7fc00ce73ea0>
+  post_request: <function PostRequest.post_request at 0x7fc00ce73f28>
+  child_exit: <function ChildExit.child_exit at 0x7fc00ce940d0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fc00ce941e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fc00ce942f0>
+  on_exit: <function OnExit.on_exit at 0x7fc00ce94400>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+[2019-12-30 09:21:28 +0000] [20242] [INFO] Starting gunicorn 20.0.0
+[2019-12-30 09:21:28 +0000] [20242] [DEBUG] Arbiter booted
+[2019-12-30 09:21:28 +0000] [20242] [INFO] Listening at: http://127.0.0.1:5000 (20242)
+[2019-12-30 09:21:28 +0000] [20242] [INFO] Using worker: threads
+[2019-12-30 09:21:28 +0000] [20246] [INFO] Booting worker with pid: 20246
+[2019-12-30 09:21:28 +0000] [20248] [INFO] Booting worker with pid: 20248
+[2019-12-30 09:21:28 +0000] [20242] [DEBUG] 2 workers
+[2019-12-30 09:21:32 +0000] [20248] [DEBUG] GET /faq
+[2019-12-30 09:21:32 +0000] [20248] [DEBUG] Closing connection.
+[2019-12-30 09:21:34 +0000] [20246] [DEBUG] GET /faq
+[2019-12-30 09:21:34 +0000] [20246] [DEBUG] Closing connection.
+[2019-12-30 09:21:36 +0000] [20248] [DEBUG] GET /faq
+[2019-12-30 09:21:36 +0000] [20248] [DEBUG] Closing connection.
+[2019-12-30 09:21:37 +0000] [20246] [DEBUG] GET /faq
+[2019-12-30 09:21:37 +0000] [20246] [DEBUG] Closing connection.
+[2019-12-30 09:21:37 +0000] [20246] [DEBUG] GET /faq
+[2019-12-30 09:21:37 +0000] [20246] [DEBUG] Closing connection.
+[2019-12-30 09:21:38 +0000] [20248] [DEBUG] GET /faq
+[2019-12-30 09:21:38 +0000] [20248] [DEBUG] Closing connection.
+[2019-12-30 09:21:38 +0000] [20246] [DEBUG] GET /faq
+[2019-12-30 09:21:38 +0000] [20246] [DEBUG] Closing connection.
+[2019-12-30 09:21:38 +0000] [20248] [DEBUG] GET /faq
+[2019-12-30 09:21:38 +0000] [20248] [DEBUG] Closing connection.
+[2019-12-30 09:21:38 +0000] [20246] [DEBUG] GET /faq
+[2019-12-30 09:21:38 +0000] [20246] [DEBUG] Closing connection.
+[2019-12-30 09:25:09 +0000] [20246] [DEBUG] GET /faq
+[2019-12-30 09:25:09 +0000] [20246] [DEBUG] Closing connection.
