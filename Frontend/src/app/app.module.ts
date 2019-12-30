@@ -18,6 +18,10 @@ import { ButtonsModule } from "ngx-bootstrap/buttons";
 import { ExtractPageApiService } from "./extract-page/extract-page-api.service";
 import { AppService } from "./app.service";
 import { ExtractComponent } from "./components/extract/extract.component";
+import { LoginComponent } from './components/login/login.component';
+import { CallbackComponent } from './components/login/callback.component';
+import * as Auth0 from 'auth0-web';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +30,9 @@ import { ExtractComponent } from "./components/extract/extract.component";
     ExtractPageComponent,
     ExplorePageComponent,
     DataDisplayComponent,
-    ExtractComponent
+    ExtractComponent,
+    LoginComponent,
+    CallbackComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +40,8 @@ import { ExtractComponent } from "./components/extract/extract.component";
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
+      { path: 'faq/callback', component: CallbackComponent },
+      { path: "faq/login", component: LoginComponent },
       { path: "faq/extract", component: ExtractPageComponent },
       { path: "faq/explore", component: ExplorePageComponent },
       { path: "faq/extractNew", component: ExtractComponent },
@@ -50,4 +58,14 @@ import { ExtractComponent } from "./components/extract/extract.component";
   providers: [ExtractPageApiService, AppService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    Auth0.configure({
+      domain: 'dev-g-e5tghp.auth0.com',
+      audience: 'https://faq-extractor/',
+      clientID: 'whRkHg3bb07JVZwADShOqvT5MkBuQuAO',
+      redirectUri: 'http://dev.imibot.ai/faq/callback',
+      scope: 'openid profile extract:Hierarchy extract:NLP extract:Firebase'
+    });
+  }
+}

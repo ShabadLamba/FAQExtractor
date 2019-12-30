@@ -1,13 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import * as Auth0 from 'auth0-web';
+import { Subscription } from 'rxjs';
+
+
 
 @Component({
-  selector: 'app-home-page',
-  templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class HomePageComponent implements OnInit {
-  pageTitle = 'Questions And Answers Scrapper';
+export class LoginComponent implements OnInit {
+
   authenticated = false;
 
   constructor() { }
@@ -21,4 +24,5 @@ export class HomePageComponent implements OnInit {
     console.log(this.authenticated);
     Auth0.subscribe((authenticated) => (self.authenticated = authenticated));
   }
+
 }

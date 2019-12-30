@@ -22,6 +22,7 @@
     "@angular/router": "~8.2.4",
     "@types/lodash": "^4.14.138",
     "angular-datatables": "^8.0.0",
+    "auth0-web": "^1.7.0",
     "bootstrap": "^4.3.1",
     "datatables.net": "^1.10.19",
     "datatables.net-dt": "^1.10.19",

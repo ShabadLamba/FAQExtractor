@@ -120,6 +120,7 @@ class Utility:
             
             return dictOfQA
         except:
+            print(sentences)
             return {}
 
     # , indexOfQnAToFindHeirarchy=0):
@@ -158,6 +159,8 @@ class Utility:
                     return []
             return listOfQnAHeirarchies
         except:
+            print(content)
+            print(dictQnA)
             return []
 
     def generateSelectorQuery(self,questionHierarchy,answerHierarchy):
