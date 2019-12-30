@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, render_template, redirect
 from flask_cors import CORS
 from QnAMain import *
 import logging
@@ -15,6 +15,7 @@ fb = firebaseUtil()
 # fb.setData(user, category.upper(), finalListOfQuestionsAndAnswers)
 
 
+@app.route('/faq/callback')
 @app.route('/faq/extract')
 @app.route('/faq/home')
 @app.route('/faq/')
@@ -22,6 +23,11 @@ fb = firebaseUtil()
 @app.route('/')
 def home():
     return render_template('index.html')
+
+
+# @app.route('/callback')
+# def authentication():
+#     return redirect('/')
 
 ############################ v1 ####################################
 @app.route('/v1/faq/extractByUrl/Hierarchy', methods=["POST"])

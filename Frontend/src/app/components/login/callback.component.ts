@@ -13,9 +13,10 @@ export class CallbackComponent implements OnInit {
 
   ngOnInit(): void {
     const self = this;
+    console.log("INSIDE CALLBACK INIT")
     Auth0.handleAuthCallback((err) => {
       if (err) alert(err);
-      self.router.navigate(['/']);
+      self.router.navigate(['/faq']);
     });
   }
 }

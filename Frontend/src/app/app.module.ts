@@ -40,7 +40,7 @@ import * as Auth0 from 'auth0-web';
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: 'callback', component: CallbackComponent },
+      { path: 'faq/callback', component: CallbackComponent },
       { path: "faq/login", component: LoginComponent },
       { path: "faq/extract", component: ExtractPageComponent },
       { path: "faq/explore", component: ExplorePageComponent },
@@ -64,7 +64,7 @@ export class AppModule {
       domain: 'dev-g-e5tghp.auth0.com',
       audience: 'https://faq-extractor/',
       clientID: 'whRkHg3bb07JVZwADShOqvT5MkBuQuAO',
-      redirectUri: 'http://localhost:4200/callback',
+      redirectUri: 'http://dev.imibot.ai/faq/callback',
       scope: 'openid profile extract:Hierarchy extract:NLP extract:Firebase'
     });
   }
