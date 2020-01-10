@@ -21,8 +21,6 @@ import { ExtractComponent } from "./components/extract/extract.component";
 import { LoginComponent } from './components/login/login.component';
 import { CallbackComponent } from './components/login/callback.component';
 import * as Auth0 from 'auth0-web';
-
-
 @NgModule({
   declarations: [
     AppComponent,
