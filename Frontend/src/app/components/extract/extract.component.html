@@ -1,1 +1,308 @@
-<p>extract works!</p>
+<div class="wrapper">
+  <div
+    class="page-header page-header-xs"
+    data-parallax="true"
+    style="background-color: rgb(88, 141, 165);"
+  >
+    <div class="motto">
+      <h1>Extract FAQs</h1>
+    </div>
+  </div>
+  <div class="section profile-content">
+    <div class="nav-tabs-navigation">
+      <div class="nav-tabs-wrapper">
+        <ngb-tabset [justify]="'center'" #tabset="ngbTabset">
+          <ngb-tab title="Extract" id="tab1">
+            <ng-template ngbTabContent>
+              <div class="row extract" id="extract">
+                <!-- <div class="col-md-6 ml-auto mr-auto"> -->
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6 ml-auto mr-auto text-center">
+                      <br />
+                      <form>
+                        <div class="column">
+                          <h3 style="padding-bottom: 15px">
+                            <b>STEP 1 :</b> Select the type of the Website
+                          </h3>
+
+                          <p style="padding-bottom: 15px;">
+                            (Click on buttons to see details)
+                          </p>
+                          <div
+                            class="row btn-group-lg"
+                            style="padding-left: 45px;"
+                          >
+                            <ul>
+                              <button
+                                class="btn btn-outline-default btn-round"
+                                data-toggle="tooltip"
+                                title="When Questions and Answers on the same page"
+                                ngbPopover="Here will be some very useful information about this popover."
+                                popoverTitle="Popover on bottom"
+                                placement="bottom"
+                                (click)="typeOfWebsite = 0"
+                              >
+                                <i class="fa fa-cog"></i> Type 1
+                              </button>
+                            </ul>
+                            <ul>
+                              <button
+                                class="btn btn-outline-default btn-round"
+                                data-toggle="tooltip"
+                                title="When webpages uses Ajax to load data"
+                                ngbPopover="Here will be some very useful information about this popover."
+                                popoverTitle="Popover on bottom"
+                                placement="bottom"
+                                (click)="typeOfWebsite = 1"
+                              >
+                                <i class="fa fa-cog"></i> Type 2
+                              </button>
+                            </ul>
+                            <ul>
+                              <button
+                                class="btn btn-outline-default btn-round"
+                                data-toggle="tooltip"
+                                title="When Questions are links to Answers"
+                                ngbPopover="Here will be some very useful information about this popover."
+                                popoverTitle="Popover on bottom"
+                                placement="bottom"
+                                (click)="typeOfWebsite = 2"
+                              >
+                                <i class="fa fa-cog"></i> Type 3
+                              </button>
+                            </ul>
+                          </div>
+
+                          <h3 style="padding-bottom: 15px; padding-top: 15px;">
+                            <b>STEP 2 :</b> Select Method of Extraction
+                          </h3>
+                          <div
+                            class="row btn-group-lg"
+                            style="padding-left: 80px;"
+                          >
+                            <ul>
+                              <button
+                                class="btn btn-outline-default btn-round btn-wd"
+                                data-toggle="tooltip"
+                                title="When Questions and Answers on the same page"
+                                ngbPopover="Here will be some very useful information about this popover."
+                                popoverTitle="Popover on bottom"
+                                placement="bottom"
+                                (click)="methodOfExtraction = 0"
+                              >
+                                <i class="fa fa-align-center"></i> Heirarchy
+                              </button>
+                            </ul>
+                            <ul>
+                              <button
+                                class="btn btn-outline-default btn-round btn-wd"
+                                data-toggle="tooltip"
+                                title="When webpages uses Ajax to load data"
+                                ngbPopover="Here will be some very useful information about this popover."
+                                popoverTitle="Popover on bottom"
+                                placement="bottom"
+                                (click)="methodOfExtraction = 1"
+                              >
+                                <i class="fa fa-question"></i> NLP
+                              </button>
+                            </ul>
+                          </div>
+
+                          <h3 style="padding-bottom: 15px; padding-top: 15px;">
+                            <b>STEP 3 :</b> Enter URL of the Website
+                          </h3>
+                          <!-- <div class="input-group my-5 mb-5 w-50 mx-auto">
+                <input
+                  [(ngModel)]="url"
+                  name="url"
+                  type="url"
+                  class="form-control"
+                  placeholder="https://experience.imiconnect.io/faqs/"
+                  aria-label="Website's Name"
+                  aria-describedby="button-addon2"
+                  required
+                />
+              </div> -->
+                          <div class="col-md-12">
+                            <div
+                              class="input-group"
+                              [ngClass]="{
+                                'input-group-focus': focus === true
+                              }"
+                            >
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"></span>
+                              </div>
+                              <input
+                                [(ngModel)]="url"
+                                name="url"
+                                type="url"
+                                class="form-control"
+                                placeholder="https://experience.imiconnect.io/faqs/"
+                                (focus)="focus = true"
+                                (blur)="focus = false"
+                                required
+                              />
+                            </div>
+                          </div>
+
+                          <!-- <h3 style="padding-bottom: 15px; padding-top: 15px;">
+                            <b>STEP 4 :</b> Enter Name of CSV File
+                          </h3>
+                          <br />
+                          <div class="col-md-12">
+                            <div
+                              class="input-group"
+                              [ngClass]="{
+                                'input-group-focus': focus === true
+                              }"
+                            >
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"></span>
+                              </div>
+                              <input
+                                type="text"
+                                [(ngModel)]="fileName"
+                                name="file"
+                                class="form-control"
+                                placeholder="imiconnectFAQs"
+                                (focus)="focus = true"
+                                (blur)="focus = false"
+                                required
+                              />
+                            </div>
+                          </div> -->
+                          <div style="padding-top: 25px;">
+                            <button
+                              class="btn btn-outline-default btn-round btn-wd"
+                              type="button"
+                              id="button-addon2"
+                              (click)="
+                                [
+                                  fetchData(
+                                    url,
+                                    fileName,
+                                    typeOfWebsite,
+                                    methodOfExtraction
+                                  ),
+                                  (startloading = true),
+                                  tabset.select('tab2')
+                                ]
+                              "
+                            >
+                              Extract
+                              <i class="fa fa-chevron-right"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                      <br />
+                    </div>
+                  </div>
+                  <br />
+                  <!-- <div class="nav-tabs-navigation">
+        <div class="nav-tabs-wrapper">
+          <ngb-tabset [justify]="'center'">
+            <ngb-tab title="Follows">
+              <ng-template ngbTabContent>
+                <div class="row following" id="follows">
+                  <div class="col-md-6 ml-auto mr-auto">
+                    <ul class="list-unstyled follows">
+                      <li>
+                        <div class="row">
+                          <div class="col-md-2 col-sm-2 ml-auto mr-auto">
+                            <img
+                              src="./assets/img/faces/clem-onojeghuo-2.jpg"
+                              alt="Circle Image"
+                              class="img-circle img-no-padding img-responsive"
+                            />
+                          </div>
+                          <div class="col-md-7 col-sm-4 ml-auto">
+                            <h6>Flume<br /><small>Musical Producer</small></h6>
+                          </div>
+                          <div class="col-md-3 col-sm-2 ml-auto mr-auto">
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  checked=""
+                                />
+                                <span class="form-check-sign"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <hr />
+                      <li>
+                        <div class="row">
+                          <div class="col-md-2 col-sm-2 ml-auto mr-auto">
+                            <img
+                              src="./assets/img/faces/ayo-ogunseinde-2.jpg"
+                              alt="Circle Image"
+                              class="img-circle img-no-padding img-responsive"
+                            />
+                          </div>
+                          <div class="col-md-7 col-sm-4 ml-auto">
+                            <h6>Banks<br /><small>Singer</small></h6>
+                          </div>
+                          <div class="col-md-3 col-sm-2 ml-auto mr-auto">
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  checked=""
+                                />
+                                <span class="form-check-sign"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </ng-template>
+            </ngb-tab>
+            <ngb-tab title="Following">
+              <ng-template ngbTabContent>
+                <h3 class="text-muted">Not following anyone yet :(</h3>
+                <br />
+                <button class="btn btn-warning btn-round">Find artists</button>
+              </ng-template>
+            </ngb-tab>
+          </ngb-tabset>
+        </div>
+      </div> -->
+                </div>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="Output" id="tab2">
+            <ng-template ngbTabContent>
+              <br />
+              <div *ngIf="!startloading && !isDataFetched">
+                EXTRACT SOMETHING FIRST!
+              </div>
+              <div *ngIf="startloading && !isDataFetched">
+                <img src="faq/static/../../../assets/img/loadingBar.gif" />
+              </div>
+              <app-data-table
+                *ngIf="isDataFetched"
+                [listOfItems]="items"
+                [filename]="fileName"
+                [showData]="showData"
+                >{{ isDataFetched }}</app-data-table
+              >
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+      </div>
+    </div>
+  </div>
+</div>
