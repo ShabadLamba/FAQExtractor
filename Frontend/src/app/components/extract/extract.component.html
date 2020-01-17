@@ -35,7 +35,11 @@
                           >
                             <ul>
                               <button
-                                class="btn btn-outline-default btn-round"
+                                [className]="
+                                  typeOfWebsite === 0
+                                    ? 'btn btn-outline-default btn-round active'
+                                    : 'btn btn-outline-default btn-round'
+                                "
                                 data-toggle="tooltip"
                                 title="When Questions and Answers on the same page"
                                 ngbPopover="Here will be some very useful information about this popover."
@@ -48,7 +52,11 @@
                             </ul>
                             <ul>
                               <button
-                                class="btn btn-outline-default btn-round"
+                                [className]="
+                                  typeOfWebsite === 1
+                                    ? 'btn btn-outline-default btn-round active'
+                                    : 'btn btn-outline-default btn-round'
+                                "
                                 data-toggle="tooltip"
                                 title="When webpages uses Ajax to load data"
                                 ngbPopover="Here will be some very useful information about this popover."
@@ -61,7 +69,11 @@
                             </ul>
                             <ul>
                               <button
-                                class="btn btn-outline-default btn-round"
+                                [className]="
+                                  typeOfWebsite === 2
+                                    ? 'btn btn-outline-default btn-round active'
+                                    : 'btn btn-outline-default btn-round'
+                                "
                                 data-toggle="tooltip"
                                 title="When Questions are links to Answers"
                                 ngbPopover="Here will be some very useful information about this popover."
@@ -83,7 +95,11 @@
                           >
                             <ul>
                               <button
-                                class="btn btn-outline-default btn-round btn-wd"
+                                [className]="
+                                  methodOfExtraction === 0
+                                    ? 'btn btn-outline-default btn-round active'
+                                    : 'btn btn-outline-default btn-round'
+                                "
                                 data-toggle="tooltip"
                                 title="When Questions and Answers on the same page"
                                 ngbPopover="Here will be some very useful information about this popover."
@@ -96,7 +112,11 @@
                             </ul>
                             <ul>
                               <button
-                                class="btn btn-outline-default btn-round btn-wd"
+                                [className]="
+                                  methodOfExtraction === 1
+                                    ? 'btn btn-outline-default btn-round active'
+                                    : 'btn btn-outline-default btn-round'
+                                "
                                 data-toggle="tooltip"
                                 title="When webpages uses Ajax to load data"
                                 ngbPopover="Here will be some very useful information about this popover."
