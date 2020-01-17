@@ -1,0 +1,32 @@
+<div class="container">
+  <h3 style="padding-bottom: 15px; padding-top: 15px;">
+    <b> Enter Name of CSV File</b>
+  </h3>
+  <br />
+  <div class="row d-flex justify-content-center">
+    <!--Grid column-->
+    <div class="col-md-6">
+      <div
+        class="input-group"
+        [ngClass]="{
+          'input-group-focus': focus === true
+        }"
+      >
+        <input
+          type="text"
+          name="file"
+          class="form-control"
+          placeholder="imiconnectFAQs"
+          (focus)="focus = true"
+          (blur)="focus = false"
+          #filename
+          required
+        />
+      </div>
+    </div>
+  </div>
+  <br />
+  <button class="btn btn-dark center-align" (click)="download()">
+    Download CSV
+  </button>
+</div>
