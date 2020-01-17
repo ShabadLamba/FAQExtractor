@@ -5,22 +5,22 @@ import {
   forwardRef,
   ViewChild,
   Input
-} from "@angular/core";
-import { AngularFireDatabase, listChanges } from "@angular/fire/database";
-import * as _ from "lodash";
-import { NgForm } from "@angular/forms";
-import { FAQ } from "../extract-page/extract-page.model";
-import { ExtractPageApiService } from "../extract-page/extract-page-api.service";
-import { ExtractPageComponent } from "../extract-page/extract-page.component";
-import { AppService } from "../app.service";
+} from '@angular/core';
+import { AngularFireDatabase, listChanges } from '@angular/fire/database';
+import * as _ from 'lodash';
+import { NgForm } from '@angular/forms';
+import { FAQ } from '../extract-page/extract-page.model';
+import { ExtractPageApiService } from '../extract-page/extract-page-api.service';
+import { ExtractPageComponent } from '../extract-page/extract-page.component';
+import { AppService } from '../app.service';
 
 @Component({
-  selector: "app-data-display",
-  templateUrl: "./data-display.component.html",
-  styleUrls: ["./data-display.component.css"],
+  selector: 'app-data-display',
+  templateUrl: './data-display.component.html',
+  styleUrls: ['./data-display.component.css'],
   providers: [
     {
-      provide: "list_name",
+      provide: 'list_name',
       multi: true,
       useExisting: forwardRef(() => DataDisplayComponent)
     }
@@ -40,11 +40,12 @@ export class DataDisplayComponent implements OnInit {
   filteredItems: any;
   filters = {};
   @Input() listOfItems: Array<any> = [];
-  @Input() filename: string = "";
+  @Input() filename = '';
   listOfQnA: Array<any> = [];
   listOfSelectedQnA: Array<any> = [];
+  // tslint:disable-next-line: ban-types
   @Input() showData: Boolean = false;
-  disabled: boolean = true;
+  disabled = true;
   // tslint:disable-next-line: member-ordering
   editField: string;
   /* Class Functions */
@@ -71,7 +72,7 @@ export class DataDisplayComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    console.log("In Submit: ", form.valid);
+    console.log('In Submit: ', form.valid);
   }
 
   updateList(id: number, property: string, event: any) {
@@ -102,7 +103,7 @@ export class DataDisplayComponent implements OnInit {
 
   selectAll() {
     this.disabled = !this.disabled;
-    console.log("CheckBoxes Disabled ", this.disabled);
+    console.log('CheckBoxes Disabled ', this.disabled);
     if (this.disabled) {
       this.listOfSelectedQnA.splice(0, this.listOfSelectedQnA.length);
     } else {

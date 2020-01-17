@@ -4,12 +4,12 @@ import {
   OnChanges,
   SimpleChanges,
   Input
-} from "@angular/core";
-import * as _ from "lodash";
-import { ExtractPageApiService } from "./extract-page-api.service";
-import { FAQ } from "./extract-page.model";
-import { Router, ActivatedRoute } from "@angular/router";
-import { isBoolean } from "util";
+} from '@angular/core';
+import * as _ from 'lodash';
+import { ExtractPageApiService } from './extract-page-api.service';
+import { FAQ } from './extract-page.model';
+import { Router, ActivatedRoute } from '@angular/router';
+import { isBoolean } from 'util';
 
 export enum websiteType {
   samePageQnALoadedWithWebsite = 0,
@@ -18,8 +18,8 @@ export enum websiteType {
 }
 
 @Component({
-  templateUrl: "./extract-page.component.html",
-  styleUrls: ["./extract-page.component.css"]
+  templateUrl: './extract-page.component.html',
+  styleUrls: ['./extract-page.component.css']
 })
 export class ExtractPageComponent implements OnInit, OnChanges {
   // static url_: any;
@@ -29,17 +29,17 @@ export class ExtractPageComponent implements OnInit, OnChanges {
     private route: ActivatedRoute
   ) { }
 
-  extractPageTitle = "Extract Questions And Answers";
-  @Input() url = "";
-  @Input() fileName = "";
+  extractPageTitle = 'Extract Questions And Answers';
+  @Input() url = '';
+  @Input() fileName = '';
   @Input() typeOfWebsite: number = websiteType.QuestionsAreLinksToAnswers;
-  @Input() showData: boolean = false;
+  @Input() showData = false;
   @Input() methodOfExtraction: number = null;
   authenticated = false;
 
 
   public isDataFetched = false;
-  outputLink = "https://experience.imiconnect.io/faqs/";
+  outputLink = 'https://experience.imiconnect.io/faqs/';
 
   items: any;
   filteredItems: any;
@@ -71,52 +71,50 @@ export class ExtractPageComponent implements OnInit, OnChanges {
             if (!value[0]) {
               // console.log(!value[0]);
               this.extractFAQApi.fetchQnA(body).subscribe(
+                // tslint:disable-next-line: no-shadowed-variable
                 value => {
-                  console.log("Inside Value");
+                  console.log('Inside Value');
                   this.items = value;
                   this.isDataFetched = true;
                 },
                 error => {
                   alert(error.message);
-                  console.log("Inside Fetch Error");
+                  console.log('Inside Fetch Error');
                   this.isDataFetched = false;
                 }
               );
             } else {
-              console.log("Inside Get Value");
+              console.log('Inside Get Value');
               this.items = value;
               this.isDataFetched = true;
             }
           },
           error => {
             alert(error.message);
-            console.log("Inside Get Error");
+            console.log('Inside Get Error');
             this.isDataFetched = false;
           }
         );
-      }
-      else if (body.methodOfExtraction === 1) {
+      } else if (body.methodOfExtraction === 1) {
         this.extractFAQApi.fetchQnANLP(body).subscribe(
           value => {
-            console.log("Inside Value");
+            console.log('Inside Value');
             this.items = value;
             this.isDataFetched = true;
           },
           error => {
             alert(error.message);
-            console.log("Inside Fetch Error");
+            console.log('Inside Fetch Error');
             this.isDataFetched = false;
           }
         );
-      }
-      else {
-        alert("Not a Valid method of extraction choosen");
-        console.log("Inside Get Error");
+      } else {
+        alert('Not a Valid method of extraction choosen');
+        console.log('Inside Get Error');
         this.isDataFetched = false;
       }
-    }
-    else {
-      alert("Sign In To Continue...");
+    } else {
+      alert('Sign In To Continue...');
       this.router.navigate(['/faq/home']);
     }
   }

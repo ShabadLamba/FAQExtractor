@@ -1,8 +1,9 @@
 import * as Auth0 from 'auth0-web';
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 
 @Component({
+  // tslint:disable-next-line: component-selector
   selector: 'callback',
   template: `
     <div>Loading authentication details...</div>
@@ -13,9 +14,9 @@ export class CallbackComponent implements OnInit {
 
   ngOnInit(): void {
     const self = this;
-    console.log("INSIDE CALLBACK INIT")
+    console.log('INSIDE CALLBACK INIT')
     Auth0.handleAuthCallback((err) => {
-      if (err) alert(err);
+      if (err) { alert(err); }
       self.router.navigate(['/faq']);
     });
   }
