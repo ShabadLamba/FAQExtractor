@@ -14,6 +14,8 @@ const routes: Routes = [
   // { path: 'components', component: ComponentsComponent },
 
   { path: '', redirectTo: 'faq/home', pathMatch: 'full' },
+  { path: 'faq', redirectTo: 'faq/home', pathMatch: 'full' },
+  { path: 'faq/', redirectTo: 'faq/home', pathMatch: 'full' },
   { path: 'faq/callback', component: CallbackComponent },
   { path: 'faq/extract', component: ExtractComponent },
   { path: 'faq/explore', component: ExploreComponent },
