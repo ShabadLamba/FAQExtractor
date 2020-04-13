@@ -21,15 +21,15 @@ url = "https://www.banking.barclaysus.com/faq.html"
 
 def getQuenstionsFromQuery(questionSelectorQuery, htmlContent):
     access_token = {'x-access-token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVkNjhkMmM2OTQzM2MwMDAxMjg1NzJlMiIsInJvbGUiOiJmbG93In0.5rX3TBpcf7i00KTWkywOsW-dRilkmnBLl5NIheklAos'}  # 'x-access-token':'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik16RTRNekF3TlRJM05UQTBOVVpETURnd01qSkdOVEJCTnpKQ056ZzVSa0V5TTBWQk5UTTRNdyJ9.eyJuaWNrbmFtZSI6ImRpbGlwLnAiLCJuYW1lIjoiZGlsaXAucEBpbWltb2JpbGUuY29tIiwicGljdHVyZSI6Imh0dHBzOi8vcy5ncmF2YXRhci5jb20vYXZhdGFyLzgyODEzMTM5OWI3YmVhNDBhNjVhMmI5OTRmMTQwOTgwP3M9NDgwJnI9cGcmZD1odHRwcyUzQSUyRiUyRmNkbi5hdXRoMC5jb20lMkZhdmF0YXJzJTJGZGkucG5nIiwidXBkYXRlZF9hdCI6IjIwMTktMDgtMjhUMDU6NTE6NTUuNzIyWiIsImVtYWlsIjoiZGlsaXAucEBpbWltb2JpbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOi8vZGV2LXowcTB6bjZsLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZDBjYTQ2YzdhMGJlYTBkMGM3MDg1NDAiLCJhdWQiOiJQS3JERUJZOUhxTEcxSHZSSWdOMGp6S0RfT2lLd0NRbCIsImlhdCI6MTU2Njk3MTkzMywiZXhwIjoxNTY3MDA3OTMzLCJhdF9oYXNoIjoic3dRMTdCeW9rTDNYMV9uTWtha2ZmZyIsIm5vbmNlIjoienZicEJWUHBYUHoycmE5aEMwYjBSeDRFZVJjbzVzbzkifQ.E_wL6zKWzqwHun0nszKsdiddt1fZVxeI6JPY2vrhPmf-j7nQVytuLBliWuZTSjX_X9I2sZTQJ-NoEWu6P7vXjcJky2mbYX31AU0aU0MQ4kFM9Kb2h6VZtnE-7Fv9WipuEz4BJZ1gbo5LU4jku0ZFvIVEwfMFKJ9kdDQjlvPd5zIxqEM2wAz0_w_msTnIxc_LPBw0BQ0iAKNZxBMjgmX6cqObuX5zvPiml7tkUd-oQKktE1rs4doMBacKVHwLbj4EBANCMgBAwL_-cCCXtOszVreoXFo_kcfjVBFMnIQN5q5jxerRE86VNwPazTjoDzj860ulGIg9vFxeBdJn74JKwA'}
-    questionData = {'selectorQuery': questionSelectorQuery,
+    questionData = {'query_selector': questionSelectorQuery,
                     'html': str(htmlContent)}
     listOfQuestions = []
     try:
         questionsResponse = requests.post(
-            'http://52.43.130.125/api/v1/flow/execute', headers=access_token, json=questionData)
+            'http://localhost:7070/cheerio/api/v1/extract', headers=access_token, json=questionData)
         try:
-            print(questionsResponse)
-            listOfQuestions = questionsResponse.json()['output']
+            print(questionsResponse.json())
+            listOfQuestions = questionsResponse.json()['data']
         except KeyError as e:
             print("No Output recieved")
             print(e)
@@ -41,15 +41,15 @@ def getQuenstionsFromQuery(questionSelectorQuery, htmlContent):
 
 def getAnswersFromQuery(answerSelectorQuery, htmlContent):
     access_token = {'x-access-token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVkNjhkMmM2OTQzM2MwMDAxMjg1NzJlMiIsInJvbGUiOiJmbG93In0.5rX3TBpcf7i00KTWkywOsW-dRilkmnBLl5NIheklAos'}  # 'x-access-token':'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik16RTRNekF3TlRJM05UQTBOVVpETURnd01qSkdOVEJCTnpKQ056ZzVSa0V5TTBWQk5UTTRNdyJ9.eyJuaWNrbmFtZSI6ImRpbGlwLnAiLCJuYW1lIjoiZGlsaXAucEBpbWltb2JpbGUuY29tIiwicGljdHVyZSI6Imh0dHBzOi8vcy5ncmF2YXRhci5jb20vYXZhdGFyLzgyODEzMTM5OWI3YmVhNDBhNjVhMmI5OTRmMTQwOTgwP3M9NDgwJnI9cGcmZD1odHRwcyUzQSUyRiUyRmNkbi5hdXRoMC5jb20lMkZhdmF0YXJzJTJGZGkucG5nIiwidXBkYXRlZF9hdCI6IjIwMTktMDgtMjhUMDU6NTE6NTUuNzIyWiIsImVtYWlsIjoiZGlsaXAucEBpbWltb2JpbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOi8vZGV2LXowcTB6bjZsLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZDBjYTQ2YzdhMGJlYTBkMGM3MDg1NDAiLCJhdWQiOiJQS3JERUJZOUhxTEcxSHZSSWdOMGp6S0RfT2lLd0NRbCIsImlhdCI6MTU2Njk3MTkzMywiZXhwIjoxNTY3MDA3OTMzLCJhdF9oYXNoIjoic3dRMTdCeW9rTDNYMV9uTWtha2ZmZyIsIm5vbmNlIjoienZicEJWUHBYUHoycmE5aEMwYjBSeDRFZVJjbzVzbzkifQ.E_wL6zKWzqwHun0nszKsdiddt1fZVxeI6JPY2vrhPmf-j7nQVytuLBliWuZTSjX_X9I2sZTQJ-NoEWu6P7vXjcJky2mbYX31AU0aU0MQ4kFM9Kb2h6VZtnE-7Fv9WipuEz4BJZ1gbo5LU4jku0ZFvIVEwfMFKJ9kdDQjlvPd5zIxqEM2wAz0_w_msTnIxc_LPBw0BQ0iAKNZxBMjgmX6cqObuX5zvPiml7tkUd-oQKktE1rs4doMBacKVHwLbj4EBANCMgBAwL_-cCCXtOszVreoXFo_kcfjVBFMnIQN5q5jxerRE86VNwPazTjoDzj860ulGIg9vFxeBdJn74JKwA'}
-    answerData = {'selectorQuery': answerSelectorQuery,
+    answerData = {'query_selector': answerSelectorQuery,
                   'html': str(htmlContent)}
     listOfAnswers = []
     try:
         answersResponse = requests.post(
-            'http://52.43.130.125/api/v1/flow/execute', headers=access_token, json=answerData)
+            'http://localhost:7070/cheerio/api/v1/extract', headers=access_token, json=answerData)
         try:
             print(answersResponse)
-            listOfAnswers = answersResponse.json()['output']
+            listOfAnswers = answersResponse.json()['data']
             for i, answer in enumerate(listOfAnswers):
                 if("?" in answer):
                     listOfAnswers[i] = re.split('(\?)', answer)[2]
@@ -63,15 +63,15 @@ def getAnswersFromQuery(answerSelectorQuery, htmlContent):
 
 def getCategoryFromQuery(categorySelectorQuery, htmlContent):
     access_token = {'x-access-token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVkNjhkMmM2OTQzM2MwMDAxMjg1NzJlMiIsInJvbGUiOiJmbG93In0.5rX3TBpcf7i00KTWkywOsW-dRilkmnBLl5NIheklAos'}  # 'x-access-token':'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik16RTRNekF3TlRJM05UQTBOVVpETURnd01qSkdOVEJCTnpKQ056ZzVSa0V5TTBWQk5UTTRNdyJ9.eyJuaWNrbmFtZSI6ImRpbGlwLnAiLCJuYW1lIjoiZGlsaXAucEBpbWltb2JpbGUuY29tIiwicGljdHVyZSI6Imh0dHBzOi8vcy5ncmF2YXRhci5jb20vYXZhdGFyLzgyODEzMTM5OWI3YmVhNDBhNjVhMmI5OTRmMTQwOTgwP3M9NDgwJnI9cGcmZD1odHRwcyUzQSUyRiUyRmNkbi5hdXRoMC5jb20lMkZhdmF0YXJzJTJGZGkucG5nIiwidXBkYXRlZF9hdCI6IjIwMTktMDgtMjhUMDU6NTE6NTUuNzIyWiIsImVtYWlsIjoiZGlsaXAucEBpbWltb2JpbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOi8vZGV2LXowcTB6bjZsLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZDBjYTQ2YzdhMGJlYTBkMGM3MDg1NDAiLCJhdWQiOiJQS3JERUJZOUhxTEcxSHZSSWdOMGp6S0RfT2lLd0NRbCIsImlhdCI6MTU2Njk3MTkzMywiZXhwIjoxNTY3MDA3OTMzLCJhdF9oYXNoIjoic3dRMTdCeW9rTDNYMV9uTWtha2ZmZyIsIm5vbmNlIjoienZicEJWUHBYUHoycmE5aEMwYjBSeDRFZVJjbzVzbzkifQ.E_wL6zKWzqwHun0nszKsdiddt1fZVxeI6JPY2vrhPmf-j7nQVytuLBliWuZTSjX_X9I2sZTQJ-NoEWu6P7vXjcJky2mbYX31AU0aU0MQ4kFM9Kb2h6VZtnE-7Fv9WipuEz4BJZ1gbo5LU4jku0ZFvIVEwfMFKJ9kdDQjlvPd5zIxqEM2wAz0_w_msTnIxc_LPBw0BQ0iAKNZxBMjgmX6cqObuX5zvPiml7tkUd-oQKktE1rs4doMBacKVHwLbj4EBANCMgBAwL_-cCCXtOszVreoXFo_kcfjVBFMnIQN5q5jxerRE86VNwPazTjoDzj860ulGIg9vFxeBdJn74JKwA'}
-    categoryData = {'selectorQuery': categorySelectorQuery,
+    categoryData = {'query_selector': categorySelectorQuery,
                     'html': str(htmlContent)}
     listOfCategories = []
     try:
         categoryResponse = requests.post(
-            'http://52.43.130.125/api/v1/flow/execute', headers=access_token, json=categoryData)
+            'http://localhost:7070/cheerio/api/v1/extract', headers=access_token, json=categoryData)
         try:
             print(categoryResponse)
-            listOfCategories = categoryResponse.json()['output']
+            listOfCategories = categoryResponse.json()['data']
             listOfCategories.insert(
                 0, 'LIST OF CATEGORIES')
         except KeyError as e:
