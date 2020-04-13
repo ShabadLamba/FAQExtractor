@@ -5,7 +5,7 @@ import logging
 from Authentication import auth
 
 app = Flask(__name__, static_folder='static',
-            template_folder='static', static_url_path="/")
+            template_folder='static', static_url_path="/faq/static")
 CORS(app, resources={r'/faq/v2*': {"origins": "*"},
                      r'/faq/v1*': {"origins": "*"}})
 
