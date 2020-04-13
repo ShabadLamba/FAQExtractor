@@ -105,6 +105,7 @@ def getQnAWithHierarchy(url):
         content = requests.get(url)
         soup = BeautifulSoup(content.text, 'html.parser')
         htmlText = tools.textFromHtml(content)
+        # print(htmlText)
         sentences = tools.SentenceTokenizer(htmlText)
         QnA = tools.fetchQnAWithHtmlText(sentences)
         # pprint(QnA)

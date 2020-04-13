@@ -12,6 +12,8 @@ CORS(app, resources={r'/faq/v2*': {"origins": "*"},
 ### Fire Initialization ###
 fb = firebaseUtil()
 
+hierarchy_route = '/faq/v1/extractByUrl/Hierarchy'
+nlp_route = '/faq/v1/extractByUrl/NLP'
 # fb.setData(user, category.upper(), finalListOfQuestionsAndAnswers)
 
 
@@ -30,7 +32,7 @@ def home():
 #     return redirect('/')
 
 ############################ v1 ####################################
-@app.route('/faq/v1/extractByUrl/Hierarchy', methods=["POST"])
+@app.route(nlp_route, methods=["POST"])
 def fetchByUrl_Hierarchy():
     print(request.get_json())
     tools = Utility()
@@ -38,7 +40,9 @@ def fetchByUrl_Hierarchy():
     try:
         if(req_data and (tools.decryptUrl((req_data["access_token"].encode())).decode()) == "paxzibydpdztcbiicgndskzgpqnicm"):
             user = fb.firebaseAuth()  # Authenticating Firebase
+            print("INSIDE HERE NEW")
             QnADict = getQnAWithHierarchy(req_data["url"])
+            print("INSIDE HERE")
             if(len(QnADict) != 0):
                 qnaCollectionOrderedDict = fb.getData()
                 listOfKeys = []
@@ -63,7 +67,7 @@ def fetchByUrl_Hierarchy():
         }
 
 
-@app.route('/faq/v1/extractByUrl/NLP', methods=["POST"])
+@app.route(hierarchy_route, methods=["POST"])
 def fetchByUrl_NLP():
     print(request.get_json())
     user = fb.firebaseAuth()  # Authenticating Firebase

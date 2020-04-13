@@ -2,6 +2,7 @@
   "name": "paper-kit-2-angular",
   "version": "1.2.0",
   "license": "MIT",
+  "main": "main.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/creativetimofficial/pk2-angular.git"
@@ -58,6 +59,7 @@
     "@types/jquery": "^3.3.31",
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
+    "electron": "^8.1.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
