@@ -611,3 +611,375 @@ ModuleNotFoundError: No module named 'QnAApi'
 [2019-12-30 09:21:16 +0000] [20238] [INFO] Worker exiting (pid: 20238)
 [2019-12-30 09:21:16 +0000] [20233] [INFO] Shutting down: Master
 [2019-12-30 09:21:16 +0000] [20233] [INFO] Reason: Worker failed to boot.
+[2020-04-13 06:58:02 +0000] [631] [DEBUG] Current configuration:
+  config: None
+  bind: ['localhost:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 2
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/FAQExtractor
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: out.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: err.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: QnAApi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f19a5b4c510>
+  on_reload: <function OnReload.on_reload at 0x7f19a5b4c620>
+  when_ready: <function WhenReady.when_ready at 0x7f19a5b4c730>
+  pre_fork: <function Prefork.pre_fork at 0x7f19a5b4c840>
+  post_fork: <function Postfork.post_fork at 0x7f19a5b4c950>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f19a5b4ca60>
+  worker_int: <function WorkerInt.worker_int at 0x7f19a5b4cb70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f19a5b4cc80>
+  pre_exec: <function PreExec.pre_exec at 0x7f19a5b4cd90>
+  pre_request: <function PreRequest.pre_request at 0x7f19a5b4cea0>
+  post_request: <function PostRequest.post_request at 0x7f19a5b4cf28>
+  child_exit: <function ChildExit.child_exit at 0x7f19a5b6d0d0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f19a5b6d1e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f19a5b6d2f0>
+  on_exit: <function OnExit.on_exit at 0x7f19a5b6d400>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+[2020-04-13 06:58:02 +0000] [631] [INFO] Starting gunicorn 20.0.0
+[2020-04-13 06:58:02 +0000] [631] [DEBUG] Arbiter booted
+[2020-04-13 06:58:02 +0000] [631] [INFO] Listening at: http://127.0.0.1:5000 (631)
+[2020-04-13 06:58:02 +0000] [631] [INFO] Using worker: threads
+[2020-04-13 06:58:02 +0000] [644] [INFO] Booting worker with pid: 644
+[2020-04-13 06:58:02 +0000] [645] [INFO] Booting worker with pid: 645
+[2020-04-13 06:58:02 +0000] [644] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+    super().init_process()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'QnAApi'
+[2020-04-13 06:58:02 +0000] [644] [INFO] Worker exiting (pid: 644)
+[2020-04-13 06:58:02 +0000] [645] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+    super().init_process()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'QnAApi'
+[2020-04-13 06:58:02 +0000] [645] [INFO] Worker exiting (pid: 645)
+[2020-04-13 06:58:02 +0000] [631] [DEBUG] 2 workers
+[2020-04-13 06:58:02 +0000] [631] [INFO] Shutting down: Master
+[2020-04-13 06:58:02 +0000] [631] [INFO] Reason: Worker failed to boot.
+[2020-04-13 06:59:06 +0000] [676] [DEBUG] Current configuration:
+  config: None
+  bind: ['localhost:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 2
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/FAQExtractor
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: out.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: err.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: QnAApi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fb173edd510>
+  on_reload: <function OnReload.on_reload at 0x7fb173edd620>
+  when_ready: <function WhenReady.when_ready at 0x7fb173edd730>
+  pre_fork: <function Prefork.pre_fork at 0x7fb173edd840>
+  post_fork: <function Postfork.post_fork at 0x7fb173edd950>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fb173edda60>
+  worker_int: <function WorkerInt.worker_int at 0x7fb173eddb70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fb173eddc80>
+  pre_exec: <function PreExec.pre_exec at 0x7fb173eddd90>
+  pre_request: <function PreRequest.pre_request at 0x7fb173eddea0>
+  post_request: <function PostRequest.post_request at 0x7fb173eddf28>
+  child_exit: <function ChildExit.child_exit at 0x7fb173efe0d0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fb173efe1e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fb173efe2f0>
+  on_exit: <function OnExit.on_exit at 0x7fb173efe400>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+[2020-04-13 06:59:06 +0000] [676] [INFO] Starting gunicorn 20.0.0
+[2020-04-13 06:59:06 +0000] [676] [DEBUG] Arbiter booted
+[2020-04-13 06:59:06 +0000] [676] [INFO] Listening at: http://127.0.0.1:5000 (676)
+[2020-04-13 06:59:06 +0000] [676] [INFO] Using worker: threads
+[2020-04-13 06:59:06 +0000] [690] [INFO] Booting worker with pid: 690
+[2020-04-13 06:59:06 +0000] [690] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+    super().init_process()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'QnAApi'
+[2020-04-13 06:59:06 +0000] [690] [INFO] Worker exiting (pid: 690)
+[2020-04-13 06:59:06 +0000] [676] [INFO] Shutting down: Master
+[2020-04-13 06:59:06 +0000] [676] [INFO] Reason: Worker failed to boot.
+[2020-04-13 06:59:31 +0000] [694] [DEBUG] Current configuration:
+  config: None
+  bind: ['localhost:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 2
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/FAQExtractor
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: out.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: err.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: QnAApi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fcdb1411510>
+  on_reload: <function OnReload.on_reload at 0x7fcdb1411620>
+  when_ready: <function WhenReady.when_ready at 0x7fcdb1411730>
+  pre_fork: <function Prefork.pre_fork at 0x7fcdb1411840>
+  post_fork: <function Postfork.post_fork at 0x7fcdb1411950>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fcdb1411a60>
+  worker_int: <function WorkerInt.worker_int at 0x7fcdb1411b70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fcdb1411c80>
+  pre_exec: <function PreExec.pre_exec at 0x7fcdb1411d90>
+  pre_request: <function PreRequest.pre_request at 0x7fcdb1411ea0>
+  post_request: <function PostRequest.post_request at 0x7fcdb1411f28>
+  child_exit: <function ChildExit.child_exit at 0x7fcdb14320d0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fcdb14321e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fcdb14322f0>
+  on_exit: <function OnExit.on_exit at 0x7fcdb1432400>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+[2020-04-13 06:59:31 +0000] [694] [INFO] Starting gunicorn 20.0.0
+[2020-04-13 06:59:31 +0000] [694] [DEBUG] Arbiter booted
+[2020-04-13 06:59:31 +0000] [694] [INFO] Listening at: http://127.0.0.1:5000 (694)
+[2020-04-13 06:59:31 +0000] [694] [INFO] Using worker: threads
+[2020-04-13 06:59:31 +0000] [698] [INFO] Booting worker with pid: 698
+[2020-04-13 06:59:31 +0000] [698] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+    super().init_process()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'QnAApi'
+[2020-04-13 06:59:31 +0000] [698] [INFO] Worker exiting (pid: 698)
+[2020-04-13 06:59:31 +0000] [694] [INFO] Shutting down: Master
+[2020-04-13 06:59:31 +0000] [694] [INFO] Reason: Worker failed to boot.
