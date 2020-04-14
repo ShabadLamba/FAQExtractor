@@ -26,7 +26,7 @@ def getQuenstionsFromQuery(questionSelectorQuery, htmlContent):
     listOfQuestions = []
     try:
         questionsResponse = requests.post(
-            'http://172.16.250.234:7070/api/v1/cheerio', headers=access_token, json=questionData)
+            'http://127.0.0.1:7070/api/v1/cheerio', headers=access_token, json=questionData)
         try:
             print(questionsResponse.json())
             listOfQuestions = questionsResponse.json()['data']
@@ -46,7 +46,7 @@ def getAnswersFromQuery(answerSelectorQuery, htmlContent):
     listOfAnswers = []
     try:
         answersResponse = requests.post(
-            'http://172.16.250.234:7070/api/v1/cheerio', headers=access_token, json=answerData)
+            'http://127.0.0.1:7070/api/v1/cheerio', headers=access_token, json=answerData)
         try:
             print(answersResponse)
             listOfAnswers = answersResponse.json()['data']
@@ -68,7 +68,7 @@ def getCategoryFromQuery(categorySelectorQuery, htmlContent):
     listOfCategories = []
     try:
         categoryResponse = requests.post(
-            'http://172.16.250.234:7070/api/v1/cheerio', headers=access_token, json=categoryData)
+            'http://127.0.0.1:7070/api/v1/cheerio', headers=access_token, json=categoryData)
         try:
             print(categoryResponse)
             listOfCategories = categoryResponse.json()['data']

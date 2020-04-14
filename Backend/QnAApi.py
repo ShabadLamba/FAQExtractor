@@ -32,7 +32,7 @@ def home():
 #     return redirect('/')
 
 ############################ v1 ####################################
-@app.route(nlp_route, methods=["POST"])
+@app.route(hierarchy_route, methods=["POST"])
 def fetchByUrl_Hierarchy():
     print(request.get_json())
     tools = Utility()
@@ -67,7 +67,7 @@ def fetchByUrl_Hierarchy():
         }
 
 
-@app.route(hierarchy_route, methods=["POST"])
+@app.route(nlp_route, methods=["POST"])
 def fetchByUrl_NLP():
     print(request.get_json())
     user = fb.firebaseAuth()  # Authenticating Firebase
