@@ -38,7 +38,7 @@
     "datatables.net-dt": "^1.10.19",
     "file-saver": "^2.0.2",
     "firebase": "^6.6.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jw-bootstrap-switch-ng2": "2.0.1",
     "ng2-nouislider": "1.7.12",
     "ngx-bootstrap": "^5.1.2",
