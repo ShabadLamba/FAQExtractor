@@ -17,6 +17,7 @@ from firebaseUtil import *
 # url = "https://customerservices.npower.com/app/answers/list/st/5/page/1"
 # url = "https://www.hdfcbank.com/personal/faq/faq-inner/gts8mint-gts8miol"
 url = "https://www.banking.barclaysus.com/faq.html"
+# 'http://127.0.0.1:7070/api/v1/cheerio'
 cheerioUrl = "http://cheerioextractor:7070/api/v1/cheerio"
 
 
