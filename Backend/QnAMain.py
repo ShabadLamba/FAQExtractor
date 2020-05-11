@@ -17,6 +17,7 @@ from firebaseUtil import *
 # url = "https://customerservices.npower.com/app/answers/list/st/5/page/1"
 # url = "https://www.hdfcbank.com/personal/faq/faq-inner/gts8mint-gts8miol"
 url = "https://www.banking.barclaysus.com/faq.html"
+cheerioUrl = "http://cheerioextractor:7070/api/v1/cheerio"
 
 
 def getQuenstionsFromQuery(questionSelectorQuery, htmlContent):
@@ -26,7 +27,7 @@ def getQuenstionsFromQuery(questionSelectorQuery, htmlContent):
     listOfQuestions = []
     try:
         questionsResponse = requests.post(
-            'http://127.0.0.1:7070/api/v1/cheerio', headers=access_token, json=questionData)
+            cheerioUrl, headers=access_token, json=questionData)
         try:
             print(questionsResponse.json())
             listOfQuestions = questionsResponse.json()['data']
@@ -46,7 +47,7 @@ def getAnswersFromQuery(answerSelectorQuery, htmlContent):
     listOfAnswers = []
     try:
         answersResponse = requests.post(
-            'http://127.0.0.1:7070/api/v1/cheerio', headers=access_token, json=answerData)
+            cheerioUrl, headers=access_token, json=answerData)
         try:
             print(answersResponse)
             listOfAnswers = answersResponse.json()['data']
@@ -68,7 +69,7 @@ def getCategoryFromQuery(categorySelectorQuery, htmlContent):
     listOfCategories = []
     try:
         categoryResponse = requests.post(
-            'http://127.0.0.1:7070/api/v1/cheerio', headers=access_token, json=categoryData)
+            cheerioUrl, headers=access_token, json=categoryData)
         try:
             print(categoryResponse)
             listOfCategories = categoryResponse.json()['data']
@@ -162,10 +163,10 @@ def getQnAWithHierarchy(url):
     #         wr.writerow(listOfCategories)
 
 
-def firebaseTesting():
-    fb = firebaseUtil()
-    user = fb.firebaseAuth()
-    fb.getData("IMI")
+# def firebaseTesting():
+#     fb = firebaseUtil()
+#     user = fb.firebaseAuth()
+#     fb.getData("IMI")
 
 
 # getQnAWithHierarchy(url)
