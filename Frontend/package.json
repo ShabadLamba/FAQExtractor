@@ -34,7 +34,7 @@
     "auth0-web": "^1.7.0",
     "bootstrap": "^4.3.1",
     "core-js": "2.4.1",
-    "datatables.net": "^1.10.19",
+    "datatables.net": "^1.10.22",
     "datatables.net-dt": "^1.10.19",
     "file-saver": "^2.0.2",
     "firebase": "^6.6.1",
