@@ -123,7 +123,7 @@ request==2019.4.13
 requests==2.22.0
 requests-oauthlib==1.2.0
 requests-toolbelt==0.9.1
-rsa==4.0
+rsa==4.7
 Scrapy==1.7.3
 selenium==3.141.0
 Send2Trash==1.5.0
